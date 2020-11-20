@@ -39,7 +39,7 @@ let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['q'] = [ ':q'                         , 'quit nvim']
 " t is for terminal
-let g:which_key_map.tt = {
+let g:which_key_map.t = {
       \ 'name' : 'FloatTerms' ,
       \ ';' : [':FloatermNew --wintype=normal --height=6'        , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
