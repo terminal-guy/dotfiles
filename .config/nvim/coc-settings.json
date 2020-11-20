@@ -1,0 +1,21 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "html",
+        "yaml",
+        "json",
+        "python",
+        "dart"
+    ],
+    "flutter.enabled": true,
+    "flutter.sdk.dart-command": "",
+    "flutter.provider.enableSnippet": true,
+    // python config
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "snippets.ultisnips.directories": [
+        "UltiSnips",
+        "~/.config/nvim/utils/snips"
+    ]
+}
