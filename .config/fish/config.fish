@@ -6,6 +6,7 @@ set EDITOR "nvim"      # $EDITOR use Emacs in terminal
 set VISUAL "code" 
 
 
+
 # sets vim as manpager
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
 
@@ -84,3 +85,15 @@ alias nv="cd ~/.config/nvim/"
 
 #alias for emulators
 #alias emulator="cd ~/Android/Sdk/emulator/ && ./emulator -avd Pixel_3a_API_30_x86 &"
+
+
+#########################################################
+# => PATH FOR APPLICATIONS
+#########################################################
+
+export DART_SDK=/opt/flutter/bin/cache/dart-sdk/bin
+
+
+
+
+
