@@ -11,9 +11,9 @@ let g:fzf_action = {
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 map <C-p> :Files<CR>
-map <leader>b :Buffers<CR>
+"map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
-nnoremap <leader>t :Tags<CR>
+nnoremap <leader>tt :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 
 
