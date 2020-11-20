@@ -205,11 +205,11 @@ let g:which_key_map.l = {
 
 let g:which_key_map.f = {
       \ 'name' : 'Flutter' ,
-      \ 'a' : [':FlutterRun'          , 'run']  ,
-      \ 'q' : [':FlutterQuit'         , 'quit cm'] ,
-      \ 'r' : [':FlutterHotReload<CR>'           , 'Hot Reload']     ,
-      \ 'R' : [':FlutterHotRestart<CR>'        , 'Hot Restart']     ,
-      \ 'd' : [':FlutterVisualDebug<CR>'           , 'debug']   ,
+      \ 'a' : [':CocCommand flutter.run'          , 'run']  ,
+      \ 'e' : [':CocCommand flutter.emulators'         , 'emulator'] ,
+      \ 'r' : [':CocCommand flutter.dev.hotReload'           , 'Hot Reload']     ,
+      \ 'R' : [':CocCommand flutter.dev.hotRestart'        , 'Hot Restart']     ,
+      \ 'dt' : [':CocCommand flutter.dev.openDevToolsProfiler'           , 'g']   ,
       \ }
 
 
