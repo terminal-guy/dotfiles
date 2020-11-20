@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dart-lang/dart-vim-plugin'
     Plug 'natebosch/vim-lsc'
     Plug 'natebosch/vim-lsc-dart'
-    Plug 'thosakwe/vim-flutter'
+"    Plug 'thosakwe/vim-flutter'
 "{{ for intellisense"    }}
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "{{ for floatterm        }}
