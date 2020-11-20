@@ -30,6 +30,7 @@ if [ -f "$userresources" ]; then
 
 
 
+    # xrdb
 
     xrdb -merge "$userresources"
 
