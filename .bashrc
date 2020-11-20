@@ -15,8 +15,6 @@
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
 
 
-
-
 #    _    _ _
 #   / \  | (_) __ _ ___
 #  / _ \ | | |/ _` / __|
