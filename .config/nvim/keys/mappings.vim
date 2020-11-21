@@ -4,8 +4,10 @@
 "Remap ESC to ii
 :imap ii <Esc>
 
+"""now using coc as the default file explorer"""
+"map <C-n> :NERDTreeToggle<CR>
+map <C-n> :CocCommand explorer<CR>
 
-map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowLineNumbers=1
