@@ -37,8 +37,6 @@ noremap <silent> <C-Down> :resize -3<CR>
 " map <Leader>th <C-w>t<C-w>H
 " map <Leader>tk <C-w>t<C-w>K
 
-" Removes pipes | that act as seperators on splits
-set fillchars+=vert:\ 
 
 " mappings  for cco flutter
 nmap <silent> gd <Plug>(coc-definition)<CR>
