@@ -54,9 +54,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     "{colorizer of them}"
- Plug 'norcalli/nvim-colorizer.lua'
-
-
+    Plug 'norcalli/nvim-colorizer.lua'
+"{{nvim treesitter and color scheme}}
+    Plug 'christianchiarulli/nvcode-color-schemes.vim'
 call plug#end()
 
 
