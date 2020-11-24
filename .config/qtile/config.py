@@ -18,7 +18,7 @@ keys = [
         desc='Launches My Terminal'
         ),
     Key([mod, "shift"], "Return",
-        lazy.spawn("dmenu_run -p 'Run: '"),
+        lazy.spawn("dmenu_run -c -bw 2 -l 20 -g 4"),
         desc='Dmenu Run Launcher'
         ),
 
