@@ -1,9 +1,3 @@
-/*  ____ _____  */
-/* |  _ \_   _|  Derek Taylor (DistroTube) */
-/* | | | || |  	http://www.youtube.com/c/DistroTube */
-/* | |_| || |  	http://www.gitlab.com/dwt1/ */
-/* |____/ |_|  	*/
-
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
@@ -19,14 +13,14 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#cccccc", "#282a36" },
-	[SchemeSel] = { "#ffffff", "#924441" },
-	[SchemeSelHighlight] = { "#d7d7d7", "#000000" },
-	[SchemeNormHighlight] = { "#e78481", "#000000" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	[SchemeNorm] = { "#cccccc", "#1e2127" },
+	[SchemeSel] = { "#ffffff", "#61afef" },
+	[SchemeSelHighlight] = { "#d7d7d7", "#56b6c2" },
+	[SchemeNormHighlight] = { "#d7d7d7", "#56b6c2" },
+	[SchemeOut] = { "#000000", "#ffffff" },
 	[SchemeMid] = { "#d7d7d7", "#1f2026" },
 };
-/* -l and -g options; controls number of lines and columns in grid if > 0 */
+/*00ffff -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
 static unsigned int lineheight = 22;  /* -h option; minimum height of a menu line */
 static unsigned int columns    = 0;
