@@ -46,11 +46,13 @@ nmap <silent> gr <Plug>(coc-references)<CR>
 
 
 
-
+" Better indenting
+vnoremap < <gv
+vnoremap > >gv
 
 " map <Leader>tt :vnew term://fish<CR>
 
 " setup mapping to call :LazyGit
 
-xmap <leader>a  <Plug>(coc-codeaction-selected)<CR>
-nmap <leader>a  <Plug>(coc-codeaction-selected)<CR>
+xmap <leader>.  <Plug>(coc-codeaction-selected)<CR>
+nmap <leader>. <Plug>(coc-codeaction-selected)<CR>

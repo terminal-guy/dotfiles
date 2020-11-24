@@ -56,7 +56,7 @@ let g:which_key_map.t = {
       \ }
 
 " a is for actions
-let g:which_key_map.u = {
+let g:which_key_map.a = {
       \ 'name' : 'actions' ,
       \ 'c' : [':ColorizerToggle'        , 'colorizer'],
       \ 'e' : [':CocCommand explorer'    , 'explorer'],
