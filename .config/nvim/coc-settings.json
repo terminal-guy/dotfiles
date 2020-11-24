@@ -8,6 +8,7 @@
         "python",
         "dart"
     ],
+    "codeLens.enable": true,
     "flutter.enabled": true,
     "flutter.sdk.dart-command": "",
     "flutter.provider.enableSnippet": true,
