@@ -142,7 +142,7 @@ function fish_right_prompt
     #	printf (yellow)"("(dim)$cwd(yellow)") "(off)
     #   printf (dim)(date +%r(yellow):(dim))(off)
 
-	printf (yellow)"("(dim)$cwd(yellow)") "(off)
+	printf (yellow)"   "(dim)$cwd(yellow)"  "(off)
     #	printf (dim)(date +%r(yellow):(dim))(off)
 
 end 
