@@ -22,7 +22,7 @@ if ! set -q lucid_prompt_color
 end
 
 if ! set -q lucid_git_color
-    set -g lucid_git_color c4c7c5
+    set -g lucid_git_color c6e2ff 
 end
 
 # State used for memoization and async calls.
