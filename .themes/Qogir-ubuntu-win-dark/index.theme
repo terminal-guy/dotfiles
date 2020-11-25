@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Qogir-ubuntu-win-dark
+Comment=An Clean Gtk+ theme based on Flat Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Qogir-ubuntu-win-dark
+MetacityTheme=Qogir-ubuntu-win-dark
+IconTheme=Qogir-ubuntu-dark
+CursorTheme=Adwaita
+ButtonLayout=menu:minimize,maximize,close
