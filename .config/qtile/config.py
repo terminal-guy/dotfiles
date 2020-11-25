@@ -9,6 +9,8 @@ from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 
 mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
+ctrl = "control"
+altkey = "mod1"
 myTerm = "alacritty"                             # My terminal of choice
 myConfig = "/home/va/.config/qtile/config.py"    # The Qtile config file location
 keys = [
@@ -38,8 +40,8 @@ keys = [
         lazy.shutdown(),
         desc='Shutdown Qtile'
         ),
-    Key(["control", "shift"], "e",
-        lazy.spawn("emacsclient -c -a emacs"),
+    Key([ctrl, altkey], "Delete",
+        lazy.spawn("xkill"),
         desc='Doom Emacs'
         ),
     # Switch focus to specific monitor (out of three)
@@ -86,6 +88,10 @@ keys = [
     Key([mod], "n",
         lazy.layout.normalize(),
         desc='normalize window size ratios'
+        ),
+    Key([mod, "control"], "m",
+        lazy.spawn("./gui-manual.sh"),
+        desc='gui macho'
         ),
     Key([mod], "m",
         lazy.layout.maximize(),
