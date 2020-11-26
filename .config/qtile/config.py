@@ -88,7 +88,7 @@ keys = [
         desc='normalize window size ratios'
         ),
     Key([mod, "control"], "m",
-        lazy.spawncmd("./.gui-man.sh"),
+        lazy.spawn("./.gui-man.sh"),
         desc='gui macho'
         ),
     Key([mod, "control"], "s",
