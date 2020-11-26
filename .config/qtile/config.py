@@ -23,7 +23,6 @@ keys = [
         lazy.spawn("dmenu_run -c -bw 2 -l 20 -g 4"),
         desc='Dmenu Run Launcher'
         ),
-
     Key([mod], "Tab",
         lazy.next_layout(),
         desc='Toggle through layouts'
@@ -44,7 +43,6 @@ keys = [
         lazy.spawn("xkill"),
         desc='Doom Emacs'
         ),
-    # Switch focus to specific monitor (out of three)
     Key([mod], "r",
         lazy.spawncmd(),
         desc='Keyboard focus to monitor 3'
@@ -90,7 +88,11 @@ keys = [
         desc='normalize window size ratios'
         ),
     Key([mod, "control"], "m",
-        lazy.spawn("./gui-manual.sh"),
+        lazy.spawncmd("./.gui-man.sh"),
+        desc='gui macho'
+        ),
+    Key([mod, "control"], "s",
+        lazy.spawn("./.dmenu/dmenu-scrot.sh"),
         desc='gui macho'
         ),
     Key([mod], "m",
@@ -144,7 +146,7 @@ layout_theme = {"border_width": 2,
 layouts = [
     # layout.MonadWide(**layout_theme),
     # layout.Bsp(**layout_theme),
-    #layout.Stack(stacks=2, **layout_theme),
+    # layout.Stack(stacks=2, **layout_theme),
     # layout.Columns(**layout_theme),
     # layout.RatioTile(**layout_theme),
     # layout.VerticalTile(**layout_theme),
@@ -152,7 +154,7 @@ layouts = [
     # layout.Zoomy(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
-    #layout.Tile(shift_windows=True, **layout_theme),
+    # layout.Tile(shift_windows=True, **layout_theme),
     # layout.Stack(num_stacks=2),
     layout.TreeTab(
         font="mononoki Nerd Font",
