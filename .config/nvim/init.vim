@@ -1,12 +1,3 @@
-
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-
-
-
-
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/keys/which-key.vim
@@ -20,7 +11,7 @@ source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/dart.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
-
+source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/themes/nvcode.vim
 "source $HOME/.config/nvim/themes/onedark.vim
