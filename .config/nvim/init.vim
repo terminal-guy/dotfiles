@@ -1,10 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
-
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -27,10 +20,11 @@ source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/dart.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
-source $HOME/.config/nvim/plug-config/markdown.vim
+
 source $HOME/.config/nvim/plug-config/sneak.vim
-"source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/themes/nvcode.vim
+"source $HOME/.config/nvim/themes/onedark.vim
 "source $HOME/.config/nvim/themes/nord.vim
 "source $HOME/.config/nvim/themes/material.vim
+"source $HOME/.config/nvim/plug-config/markdown.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
