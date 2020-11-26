@@ -4,7 +4,7 @@
 
 #
 
-<a href="https://www.deviantart.com/owl4ce/art/Joyful-Desktop-v2-1-858789495"><img height="200" src="https://specials-images.forbesimg.com/imageserve/5dc1a7ccca425400079c78c4/960x0.jpg?fit=scale" alt="preview" align="right" width="400px"></a>
+<img height="200" src="https://specials-images.forbesimg.com/imageserve/5dc1a7ccca425400079c78c4/960x0.jpg?fit=scale" alt="preview" align="right" width="400px"></a>
 ### Hi every one! Thanks for visting!
 ######
 This is my Personal Configurations of the 🖥️ Window Manager and some of</br> The 📌 Applications I use too.
