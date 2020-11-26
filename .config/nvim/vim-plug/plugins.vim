@@ -61,6 +61,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
     Plug 'justinmk/vim-sneak'
+    
+    Plug 'unblevable/quick-scope'
+   
+
 call plug#end()
 
 
