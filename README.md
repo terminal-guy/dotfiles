@@ -43,7 +43,7 @@ This is my Personal Configurations of the 🖥️ Window Manager and some of</br
 
 - **File Manager:** [PCManFM](https://wiki.archlinux.org/index.php/PCManFM)
 
-- **Text Editor:** [Vim](https://www.vim.org/), [DOOM EMACS](https://github.com/hlissner/doom-emacs), [VsCode](https://code.visualstudio.com/)
+- **Text Editor:** [NeoVim](https://neovim.io/), [Vim](https://www.vim.org/), [DOOM EMACS](https://github.com/hlissner/doom-emacs), [VsCodium](https://vscodium.com/)
 
 - **Panel:** [Xmobar](https://hackage.haskell.org/package/xmobar), [Polybar](https://github.com/polybar/polybar), [Spectrwm BUILT IN BAR](https://github.com/conformal/spectrwm)
 
