@@ -26,14 +26,13 @@ bind '$' __history_previous_command_arguments
 # Function for creating a backup file
 # ex: backup file.txt
 # result: copies file as file.txt.bak
-function backup --argument filename
-    cp $filename $filename.bak
+function backup --argument filename 
+    cp -r $filename $filename.bak
     mv $filename.bak ~/.backup/
 end
 
-function dotf --argument folder commitm 
-    config add $folder
-    config commit -m '$commitm'
+function dotf -a commitm  
+    config commit -m $commitm 
     config push
 end
 
