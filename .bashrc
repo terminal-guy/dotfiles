@@ -60,6 +60,6 @@ alias spectr="startx /usr/bin/spectrwm"
 alias doom="~/.emacs.d/bin/doom"
 
 colorscript random
-PS1='[\u@\h \W]\$ '
 
+export PS1="\[\e[33m\]❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
 exec fish
