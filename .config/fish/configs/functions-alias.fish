@@ -36,6 +36,10 @@ function dotf -a commitm
     config push
 end
 
+function gitter -a commitm  
+    git commit -m $commitm 
+    git push
+end
 
 
 
