@@ -87,14 +87,23 @@ keys = [
         lazy.layout.normalize(),
         desc='normalize window size ratios'
         ),
+    Key([mod, "control"], "e",
+        lazy.spawn("./.dmenu/dmenu-edit-configs.sh"),
+        desc='gui macho'
+        ),
     Key([mod, "control"], "m",
         lazy.spawn("./.gui-man.sh"),
         desc='gui macho'
         ),
     Key([mod, "control"], "s",
         lazy.spawn("./.dmenu/dmenu-scrot.sh"),
-        desc='gui macho'
+        desc='scrot screenshot utils'
         ),
+    Key([mod], "p",
+        lazy.spawn("./.dmenu/dmenu-webpages.sh"),
+        desc='dmenu webpages script'
+        ),
+
     Key([mod], "m",
         lazy.layout.maximize(),
         desc='toggle window between minimum and maximum sizes'
