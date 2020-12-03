@@ -1,11 +1,7 @@
-/*  ____ _____  */
-/* |  _ \_   _|  Derek Taylor (DistroTube) */
-/* | | | || |  	http://www.youtube.com/c/DistroTube */
-/* | |_| || |  	http://www.gitlab.com/dwt1/ */
-/* |____/ |_|  	*/ 
-
 /* See LICENSE file for copyright and license details. */
 /* appearance */
+#include <X11/XF86keysym.h>
+
 static const unsigned int borderpx    = 2;        /* border pixel of windows */
 static const unsigned int snap        = 32;       /* snap pixel */
 static const unsigned int gappx       = 6;        /* pixel gap between clients */
@@ -18,15 +14,15 @@ static const int vertpadbar           = 7;        /* vertical padding for status
  * Arch repos and is listed as a dependency for this build. JoyPixels is also
  * a hard dependency and makes colored fonts and emojis possible.
  */
-static const char *fonts[]            = {"Mononoki Nerd Font:size=9:antialias=true:autohint=true",
-                                         "Hack:size=8:antialias=true:autohint=true",
+static const char *fonts[]            = {"mononoki Nerd Font:size=9:antialias=true:autohint=true",
+                                         "Font Awesome 5 Free:size=8:antialias=true:autohint=true",
                                          "JoyPixels:size=10:antialias=true:autohint=true"
 										};
 static const char col_gray1[]         = "#292d3e";
 static const char col_gray2[]         = "#292d3e"; /* border color unfocused windows */
 static const char col_gray3[]         = "#96b5b4";
-static const char col_gray4[]         = "#d7d7d7";
-static const char col_cyan[]          = "#924441"; /* border color focused windows and tags */
+static const char col_gray4[]         = "#FFFFFF";
+static const char col_cyan[]          = "#6B5B95"; /* border color focused windows and tags */
 /* bar opacity 
  * 0xff is no transparency.
  * 0xee adds wee bit of transparency.
@@ -89,14 +85,31 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]    = { "dmenu_run", "-p", "Run: ", NULL };
+static const char *dmenucmd[]    = { "dmenu_run",    "-l", "20", "-bw",  "2", "-c", "-g" ,"4", "-p", "Run: ", NULL };
 /* An alternative way to launch st along with the fish shell */
 /* static const char *termcmd[]     = { "st", "-e fish", NULL }; */
-static const char *termcmd[]     = { "st", NULL };
+static const char *termcmd[]     = { "alacritty", NULL };
 static const char *tabtermcmd[]  = { "tabbed", "-r 2", "st", "-w", "''", NULL };
+
+
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+
+
+
+
+
+
+
 
 static Key keys[] = {
 	/* modifier             key        function        argument */
+	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ MODKEY,     XK_p, spawn,          {.v = dmenucmd } },
+
 	{ MODKEY|ShiftMask,     XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY,               XK_Return, spawn,          {.v = termcmd } },
 	{ Mod1Mask,             XK_Return, spawn,          {.v = tabtermcmd } },
@@ -136,22 +149,10 @@ static Key keys[] = {
 	
     /* Apps Launched with SUPER + ALT + KEY */
 	{ MODKEY|Mod1Mask,        XK_b,    spawn,          CMD("tabbed -r 2 surf -pe x '.surf/html/homepage.html'") },
-	{ MODKEY|Mod1Mask,        XK_c,    spawn,          CMD("st -e cmus") },
-	{ MODKEY|Mod1Mask,        XK_e,    spawn,          CMD("st -e emacsclient -c -a emacs") },
-	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("st -e vifm") },
-	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("st -e htop") },
-	{ MODKEY|Mod1Mask,        XK_i,    spawn,          CMD("st -e irssi") },
-	{ MODKEY|Mod1Mask,        XK_l,    spawn,          CMD("st -e lynx gopher://distro.tube") },
-	{ MODKEY|Mod1Mask,        XK_n,    spawn,          CMD("st -e newsboat") },
-	{ MODKEY|Mod1Mask,        XK_r,    spawn,          CMD("st -e rtv") },
+	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("urxvt -e vifm") },
+	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("urxvt -e htop") },
 	
     /* Dmenu scripts launched with ALT + CTRL + KEY */
-	{ Mod1Mask|ControlMask, XK_e,      spawn,          CMD("./.dmenu/dmenu-edit-configs.sh") },
-	{ Mod1Mask|ControlMask, XK_m,      spawn,          CMD("./.dmenu/dmenu-sysmon.sh") },
-	{ Mod1Mask|ControlMask, XK_p,      spawn,          CMD("passmenu") },
-	{ Mod1Mask|ControlMask, XK_r,      spawn,          CMD("./.dmenu/dmenu-reddio.sh") },
-	{ Mod1Mask|ControlMask, XK_s,      spawn,          CMD("./.dmenu/dmenu-surfraw.sh") },
-	{ Mod1Mask|ControlMask, XK_i,      spawn,          CMD("./.dmenu/dmenu-scrot.sh") },
     
 	TAGKEYS(                  XK_1,          0)
 	TAGKEYS(                  XK_2,          1)

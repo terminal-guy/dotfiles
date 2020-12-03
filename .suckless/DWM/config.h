@@ -14,8 +14,8 @@ static const int vertpadbar           = 7;        /* vertical padding for status
  * Arch repos and is listed as a dependency for this build. JoyPixels is also
  * a hard dependency and makes colored fonts and emojis possible.
  */
-static const char *fonts[]            = {"Mononoki Nerd Font:size=9:antialias=true:autohint=true",
-                                         "Hack:size=8:antialias=true:autohint=true",
+static const char *fonts[]            = {"mononoki Nerd Font:size=9:antialias=true:autohint=true",
+                                         "Font Awesome 5 Free:size=8:antialias=true:autohint=true",
                                          "JoyPixels:size=10:antialias=true:autohint=true"
 										};
 static const char col_gray1[]         = "#292d3e";
@@ -85,10 +85,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]    = { "dmenu_run", "-p", "Run: ", NULL };
+static const char *dmenucmd[]    = { "dmenu_run",    "-l", "20", "-bw",  "2", "-c", "-g" ,"4", "-p", "Run: ", NULL };
 /* An alternative way to launch st along with the fish shell */
 /* static const char *termcmd[]     = { "st", "-e fish", NULL }; */
-static const char *termcmd[]     = { "urxvt", NULL };
+static const char *termcmd[]     = { "alacritty", NULL };
 static const char *tabtermcmd[]  = { "tabbed", "-r 2", "st", "-w", "''", NULL };
 
 
