@@ -40,10 +40,3 @@ function gitter -a commitm
     git commit -m $commitm 
     git push
 end
-
-
-
-
-
-
-
