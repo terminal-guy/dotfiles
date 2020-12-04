@@ -49,5 +49,5 @@ case "$choice" in
 		exit 1
 	;;
 esac
-brave-browser-nightly "$choice"
+firefox "$choice"
 # emacsclient -c -a emacs "$choice"
