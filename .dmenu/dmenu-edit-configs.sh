@@ -1,12 +1,14 @@
 #!/bin/bash
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
-#
-# Dmenu script for editing some of my more frequently edited config files.
-
+# ██╗   ██╗ █████╗  
+# ██║   ██║██╔══██╗ Vishal Adhithya (VA)
+# ██║   ██║███████║ https://github.com/terminal-guy/ (GITHUB  )
+# ╚██╗ ██╔╝██╔══██║
+#  ╚████╔╝ ██║  ██║
+#   ╚═══╝  ╚═╝  ╚═╝
+       
+###########################################################
+## => MY DMENU SCRIPT TO EDIT CONFIG FILES   
+###########################################################
 
 declare options=("alacritty
 awesome

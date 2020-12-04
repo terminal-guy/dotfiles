@@ -1,9 +1,15 @@
 #!/bin/bash
-#changelog
-#v0.3
-#added 1. Notifications 2.unique names for each type (for quick launch) 3.better photo editor (pinta) 4.dmenu title
-#v0.4
-#1.Added variable for notification timeouts. 2. Show link in notification
+
+# ██╗   ██╗ █████╗  
+# ██║   ██║██╔══██╗ Vishal Adhithya (VA)
+# ██║   ██║███████║ https://github.com/terminal-guy/ (GITHUB  )
+# ╚██╗ ██╔╝██╔══██║
+#  ╚████╔╝ ██║  ██║
+#   ╚═══╝  ╚═╝  ╚═╝
+       
+###########################################################
+## => MY DMENU SCRIPT TO TAKE SCREENSHOTS   
+###########################################################
 
 
 IMG_PATH=/home/va/.screenshots/
