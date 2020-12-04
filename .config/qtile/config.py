@@ -126,6 +126,20 @@ keys = [
         lazy.layout.toggle_split(),
         desc='Toggle between split and unsplit sides of stack'
         ),
+    # Change the volume if your keyboard has special volume keys.
+    Key(
+        [], "XF86AudioRaiseVolume",
+        lazy.spawn("amixer -c 0 -q set Master 2dB+")
+    ),
+    Key(
+        [], "XF86AudioLowerVolume",
+        lazy.spawn("amixer -c 0 -q set Master 2dB-")
+    ),
+    Key(
+        [], "XF86AudioMute",
+        lazy.spawn("amixer -c 0 -q set Master toggle")
+    ),
+
 ]
 
 group_names = [(" ", {'layout': 'monadtall'}),
