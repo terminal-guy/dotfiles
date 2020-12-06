@@ -25,7 +25,9 @@ export MANWIDTH=999
 
 
 
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+#alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 
 #shopt
 
