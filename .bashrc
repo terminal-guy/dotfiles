@@ -41,6 +41,18 @@ shopt -s checkwinsize # checks term size when bash regains control
 
 
 
+# pacman and yay
+alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
+alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
+alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
+alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
+alias pacin="sudo pacman -S"
+alias pacout="sudo pacman -Rcs"
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+
+
+
+
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
@@ -64,9 +76,9 @@ alias doom="~/.emacs.d/bin/doom"
 
 colorscript random
 
-alias clear='clear; echo; echo;  spark 0 30 55 80 33 150 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 15 | lolcat; echo; echo'
+#alias clear='clear; echo; echo;  spark 0 30 55 80 33 150 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 15 | lolcat; echo; echo'
 
-
+alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo' # Coloured
 
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
 #exec fish
