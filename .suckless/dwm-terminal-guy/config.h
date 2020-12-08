@@ -99,7 +99,7 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
 
-
+/*static const char *notification[] = { "./.config/scripts/notification-center.sh" NULL };*/
 
 
 
@@ -151,8 +151,10 @@ static Key keys[] = {
 	
     /* Apps Launched with SUPER + ALT + KEY */
 	{ MODKEY|Mod1Mask,        XK_b,    spawn,          CMD("tabbed -r 2 surf -pe x '.surf/html/homepage.html'") },
-	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("urxvt -e vifm") },
-	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("urxvt -e htop") },
+	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("alacritty -e ranger") },
+	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("alacritty -e htop") },
+        { Mod1Mask,        XK_e,    spawn,          CMD("./.config/scripts/notification-center.sh") },
+
 	
     /* Dmenu scripts launched with ALT + CTRL + KEY */
     
