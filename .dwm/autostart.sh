@@ -1,4 +1,5 @@
 #/bin/zsh
 
-picom &
+picom --experimental-backend &
 nitrogen --restore &
+dwmblocks &
