@@ -1,0 +1,14 @@
+--- dwm.c	2020-03-01 19:10:06.680155097 +1300
++++ dwm.c	2020-03-01 19:28:26.793564016 +1300
+@@ -1291,7 +1301,10 @@
+ 	c->oldy = c->y; c->y = wc.y = y;
+ 	c->oldw = c->w; c->w = wc.width = w;
+ 	c->oldh = c->h; c->h = wc.height = h;
+-	wc.border_width = c->bw;
++	if (c->isfloating)
++		wc.border_width = c->floatborderpx;
++	else
++		wc.border_width = c->bw;
+ 	XConfigureWindow(dpy, c->win, CWX|CWY|CWWidth|CWHeight|CWBorderWidth, &wc);
+ 	configure(c);
+ 	XSync(dpy, False);
