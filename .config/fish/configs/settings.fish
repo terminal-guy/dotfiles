@@ -6,8 +6,10 @@ set VISUAL "code"
 
 
 
-# sets vim as manpager
-export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
+# sets neovim as manpager
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
 
 
 #########################################################
