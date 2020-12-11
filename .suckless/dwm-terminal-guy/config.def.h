@@ -150,7 +150,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,     XK_period, tagmon,         {.i = +1 } },
 	
     /* Apps Launched with SUPER + ALT + KEY */
-	{ MODKEY|Mod1Mask,        XK_b,    spawn,          CMD("tabbed -r 2 surf -pe x '.surf/html/homepage.html'") },
 	{ MODKEY|Mod1Mask,        XK_f,    spawn,          CMD("alacritty -e ranger") },
 	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("alacritty -e htop") },
         { Mod1Mask,        XK_e,    spawn,          CMD("./.config/scripts/notification-center.sh") },
