@@ -18,7 +18,7 @@ alias vundle-int="vim +PluginInstall +qall"
 alias vi="nvim"
 
 # alias for config files to github
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # alias for import gpg keys from aur
 alias imp-gpg='gpg --keyserver pool.sks-keyservers.net --recv-keys'
@@ -35,6 +35,9 @@ alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
 alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 #alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias pacin="sudo pacman -S"
+alias pacout="sudo pacman -Rcs"
+
 
 
 # git alias
