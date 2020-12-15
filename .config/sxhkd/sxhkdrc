@@ -51,7 +51,10 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-#
+
+
+
+# Move a floating window
 # focus/swap
 #
 
@@ -105,6 +108,10 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+
+# Toggle floating on and off
+super + o
+
 #
 # move/resize
 #
@@ -127,4 +134,15 @@ XF86AudioRaiseVolume
 	amixer set Master 5%+
 XF86AudioMute
 	pulseaudio-ctl mute
+
+
+
+# notfication center
+
+alt + e
+  kill -s USR1 $(pidof deadd-notification-center)
+
+
+
+
 
