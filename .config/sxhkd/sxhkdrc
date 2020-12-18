@@ -111,7 +111,7 @@ super + ctrl + shift + space
 
 # Toggle floating on and off
 super + o
-
+  bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 #
 # move/resize
 #
