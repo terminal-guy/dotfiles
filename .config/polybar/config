@@ -4,10 +4,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;
 
 [colors]
-  background = #1f2f3a
-  background-alt = #1f2f4f
-  foreground = #dfdfdf
-  foreground-alt = #e89eac
+  background = #eee8d5
+  background-alt = #fdf6e3
+  foreground = #073642
+  foreground-alt = #d33682
   primary = #EA526F
   secondary = #4cbab8
   alert = #bd2c40
@@ -19,7 +19,7 @@
   offset-y = 2.5%
   radius = 0
   fixed-center = true
-  background = ${colors.background}
+  background = #eee8d5 
   foreground = ${colors.foreground}
   line-size = 2
   line-color = #f00
@@ -61,8 +61,9 @@
   click-left = exec firefox calendar.google.com &
 
 
-[module/memory]
 ;https://github.com/jaagr/polybar/wiki/Module:-memory
+
+[module/memory]
 type = internal/memory
 interval = 1
 ; Available tokens:
@@ -77,15 +78,16 @@ interval = 1
 label = %percentage_used%%
 bar-used-indicator =
 bar-used-width = 10
-bar-used-foreground-0 = #3384d0
+bar-used-foreground-0 = #2aa198
 bar-used-fill = 
 bar-used-empty = 
 bar-used-empty-foreground = #ffffff
 
+click-left = alacritty -e htop 
 format = <label> <bar-used>
 format-prefix = "  "
-format-prefix-foreground = #3384d0
-format-underline = #FFFFFF
+format-prefix-foreground = #2aa198
+format-underline = #859900
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -143,7 +145,7 @@ format-background = ${colors.background}
   time-alt = %H:%M:%S
   format-prefix = 
   format-prefix-foreground = ${colors.foreground-alt}
-  format-underline = ${colors.primary}
+  format-underline = #2aa198 
   label = %date%%time%
 
 [module/pulseaudio]
