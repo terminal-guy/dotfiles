@@ -147,6 +147,12 @@ alt + e
   kill -s USR1 $(pidof deadd-notification-center)
 
 
+#screen shot
+super + ctrl + s
+	$HOME/.dmenu/dmenu-scrot.sh
+
+
+
 
 
 
