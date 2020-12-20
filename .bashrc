@@ -51,6 +51,7 @@ alias pacout="sudo pacman -Rcs"
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 
+# export PATH="$PATH:/home/va/.source/development/flutter/bin"
 
 
 # Changing "ls" to "exa"
