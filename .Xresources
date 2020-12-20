@@ -1,25 +1,3 @@
-!! Xterm Configuration
-XTerm*renderFont: true
-XTerm*faceName: xft:Mononoki Nerd Font, \
-                xft:JoyPixels:size=12, \
-                xft:Monospace:style=Medium:size=12   
-XTerm*faceSize: 16
-XTerm.termName: xterm-256color
-XTerm*selectToClipboard: true
-XTerm.vt100.locale: true
-XTerm.vt100.metaSendsEscape: true
-XTerm.vt100.saveLines: 3000
-XTerm.vt100.translations: #override \n\
-  Ctrl <Key> j: smaller-vt-font() \n\
-  Ctrl <Key> k: larger-vt-font()
-  Shift <Key>Insert:    insert-selection(SELECT) \n\
-  Ctrl Shift <Key>V:    insert-selection(SELECT) \n\
-  Ctrl Shift <Key>C:    copy-selection(SELECT)
-  <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
-!! keyboard copy and insert for xterm 
-
-!! Urxvt configuration
-
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -28,112 +6,175 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
+XTerm*renderFont: true
+XTerm*faceName: xft:Mononoki Nerd Font, \
+                xft:JoyPixels:size=12, \
+                xft:Monospace:style=Medium:size=12   
+XTerm*faceSize: 14
+XTerm*utf8: 2
+XTerm*locale: true
 
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
+
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
-urxvt*scrollBar: false
-urxvt*matcher.button: 1
 URxvt*buffered: false
-urxvt.transparent: true
-URxvt*imLocale: en_IN.UTF-8
 URxvt.intensityStyles: false
-urxvt.boldFont:
-URxvt*cursorUnderline: true
-URxvt*geometry: 85x20
-*internalBorder: 26
-URxvt*fading: 0
-URxvt*tintColor: #ffffff
-URxvt.colorUL: #4682B4
-URxvt*shading: 0
-URxvt*inheritPixmap: False
-
-
-
-! Fix font space
-
-URxvt*letterSpace: -1
- 
-URxvt.scrollBar:	false
-! do not scroll with output
-URxvt*scrollTtyOutput: false
-
-! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer: true
-
-! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress: true
-
-URxvt.url-launcher: /usr/bin/xdg-open
-!! extensions
-urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed,url-select,keyboard-select,clipboard,fullscreen
-
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-
-URxvt.keysym.C-k:  resize-font:smaller
-URxvt.keysym.C-j:    resize-font:bigger
-
-!!keysym
-URxvt.urlLauncher: firefox
-URxvt.keysym.F11: perl:fullscreen:switch
-
-
 URxvt.font: xft:Mononoki Nerd Font:size=12, \
             xft:JoyPixels:size=12, \
-            xft:Monospace:style=Medium:size=12  
+            xft:Monospace:style=Medium:size=12   
+URxvt.saveLines: 2000
+URxvt.scrollBar: false
+URxvt.cursorColor: white
 
-!! COLORS 
+!! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.keysym.C-k:   font-size:increase
+URxvt.keysym.C-j:   font-size:decrease
+!! Matcher
+URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+!!clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt*depth: 32
 
-! Base16 Dracula
-! Scheme: Mike Barkmin ( http://github.com/mikebarkmin ) based on Dracula Theme (http://github.com/dracula)
 
-#define base00 #282936
-#define base01 #3a3c4e
-#define base02 #4d4f68
-#define base03 #626483
-#define base04 #62d6e8
-#define base05 #e9e9f4
-#define base06 #f1f2f8
-#define base07 #f7f7fb
-#define base08 #ea51b2
-#define base09 #b45bcf
-#define base0A #00f769
-#define base0B #ebff87
-#define base0C #a1efe4
-#define base0D #62d6e8
-#define base0E #b45bcf
-#define base0F #00f769
+! Palenight Xresources palette
+!! COLORS
 
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
+!!URxvt*foreground:   #bbc5ff
+!!URxvt*background:   [95]#282a36
+!!URxvt*cursorColor:  #bbc5ff
+!!
+!!XTerm*foreground: #bbc5ff
+!!XTerm*background: #282a36
+!!XTerm*cursorColor: #bbc5ff
+!!
+!!! black
+!!*.color0:       #101010  !! originally #292d3e
+!!*.color8:       #434758
+!!
+!!! red
+!!*.color1:       #f07178
+!!*.color9:       #ff8b92
+!!
+!!! green
+!!*.color2:       #c3e88d
+!!*.color10:      #ddffa7
+!!
+!!! yellow
+!!*.color3:       #ffcb6b
+!!*.color11:      #ffe585
+!!
+!!! blue
+!!*.color4:       #82aaff
+!!*.color12:      #9cc4ff
+!!
+!!! magenta
+!!*.color5:       #c792ea
+!!*.color13:      #e1acff
+!!
+!!! cyan
+!!*.color6:       #89ddff
+!!*.color14:      #a3f7ff
+!!
+!!! white
+!!*.color7:       #d0d0d0
+!!*.color15:      #ffffff
+!!! special
+!!*.foreground:   #bbc2cf
+!!*.background:   #282c34
+!!*.cursorColor:  #bbc2cf
+!!
+!!! black
+!!*.color0:       #1c1f24
+!!*.color8:       #5b6268
+!!
+!!! red
+!!*.color1:       #ff6c6b
+!!*.color9:       #da8548
+!!
+!!! green
+!!*.color2:       #98be65
+!!*.color10:      #4db5bd
+!!
+!!! yellow
+!!*.color3:       #da8548
+!!*.color11:      #ecbe7b
+!!
+!!! blue
+!!*.color4:       #51afef
+!!*.color12:      #2257a0
+!!
+!!! magenta
+!!*.color5:       #c678dd
+!!*.color13:      #a9a1e1
+!!
+!!! cyan
+!!*.color6:       #5699af
+!!*.color14:      #46d9ff
+!!
+!!! white
+!!*.color7:       #202328
+!!*.color15:      #dfdfdf
+!!
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
 
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
+! special
+*.foreground:   #bbc2cf
+*.background:   #282c34
+*.cursorColor:  #bbc2cf
 
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
+! black
+*.color0:       #1c1f24
+*.color8:       #5b6268
+
+! red
+*.color1:       #ff6c6b
+*.color9:       #da8548
+
+! green
+*.color2:       #98be65
+*.color10:      #4db5bd
+
+! yellow
+*.color3:       #da8548
+*.color11:      #ecbe7b
+
+! blue
+*.color4:       #51afef
+*.color12:      #3071db
+
+! magenta
+*.color5:       #c678dd
+*.color13:      #a9a1e1
+
+! cyan
+*.color6:       #5699af
+*.color14:      #46d9ff
+
+! white
+*.color7:       #202328
+*.color15:      #dfdfdf
+
