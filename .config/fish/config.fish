@@ -14,4 +14,7 @@ source $HOME/.config/fish/configs/alias.fish
 source $HOME/.config/fish/configs/settings.fish
 source $HOME/.config/fish/configs/functions-alias.fish
 source $HOME/.config/fish/configs/spark.fish
+pfetch
+
 starship init fish | source
+
