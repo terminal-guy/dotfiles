@@ -1,0 +1,8 @@
+configuration {
+	show-icons: true;
+	icon-theme: "Papirus";
+	drun-display-format: "{name}";
+	disable-history: false;
+	theme: "/home/va/.config/rofi/slate_solarized.rasi";
+	display-drun: "";
+}
