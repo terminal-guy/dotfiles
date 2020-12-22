@@ -1,0 +1,215 @@
+#       
+add_newline = true
+
+[line_break]
+disabled = true
+
+[character]
+#disabled = true
+#style = "bg:#E5E5E5 fg:#171a1f"
+success_symbol = ""
+error_symbol = ""
+vicmd_symbol = ""
+use_symbol_for_status = true
+
+[directory]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[$read_only ]($style)[$path ]($style)[](fg:#E5E5E5)"
+read_only=" "
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+
+[hostname]
+disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+ssh_only = false
+trim_at = ".local"
+
+[username]
+disabled = true
+style_user = "bg:#E5E5E5 fg:#171a1f"
+style_root = "bg:#E5E5E5 fg:#fb4934"
+format = "[ $user]($style)"
+show_always = true
+
+[cmd_duration]
+disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[](fg:#E5E5E5)[ ]($style)[$duration]($style)[](fg:#E5E5E5)"
+show_notifications = true
+min_time_to_notify = "9999"
+
+[time]
+disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[](fg:#E5E5E5)[ ]($style)[$time]($style)[](fg:#E5E5E5)"
+time_format = "%T"
+utc_time_offset = "1"
+time_range = "00:00:00-06:00:00"
+
+[memory_usage]
+disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[](fg:#E5E5E5)[$symbol]($style)[${ram}( | ${swap}) ]($style)[](fg:#E5E5E5)"
+symbol = "  "
+threshold = 0
+
+[battery]
+disabled = false
+style = "bg:#E5E5E5 fg:#171a1f"
+unknown_symbol = "  "
+empty_symbol = "  "
+discharging_symbol = "  "
+charging_symbol = "  "
+full_symbol = "  "
+        [[battery.display]]
+        threshold = 10
+        style = "bold fg:#fb4934"
+
+        [[battery.display]]
+        threshold = 30
+        style = "fg:#fe8019"
+
+        [[battery.display]]
+        threshold = 50
+        style = "fg:#fabd2f"
+
+        
+
+# VCS
+[git_branch]
+#disabled = true
+symbol = " "
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[](fg:#E5E5E5)[$symbol$branch]($style)[](fg:#E5E5E5)"
+
+[git_commit]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[](fg:#E5E5E5)[ ﰖ $hash]($style)[](fg:$style) "
+
+[git_state]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "[](fg:#E5E5E5)[State:($state( $progress_current/$progress_total))]($style)[](fg:$style) "
+am = "APPLYING-MAILBOX"
+am_or_rebase = "APPLYING-MAILBOX/REBASE"
+
+[git_status]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind)"
+conflicted = "[](fg:#E5E5E5)[Conflicted:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+staged = "[](fg:#E5E5E5)[Staged:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+modified = "[](fg:#E5E5E5)[Modified:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+renamed = "[](fg:#E5E5E5)[Renamed:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+deleted = "[](fg:#E5E5E5)[Deleted:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+untracked = "[](fg:#E5E5E5)[Untracked:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+stashed = "[](fg:#E5E5E5)[Stashed:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+ahead = "[](fg:#E5E5E5)[Ahead:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+behind = "[](fg:#E5E5E5)[Behind:${count}](bg:#E5E5E5)[](fg:#E5E5E5)"
+diverged = "[](fg:#E5E5E5)[Diverged:${count}נּ](bg:#E5E5E5)[ Ahead:${ahead_count}][ Behind:${behind_count}][](fg:#E5E5E5)"
+
+[shlvl]
+#disabled = true
+disabled = false
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[env_var]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = " gambling with [$env_value]($style)"
+variable = "GAMBLE_TEST_COMMAND"
+
+[aws]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[conda]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[dart]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[elixir]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[elm]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[golang]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[java]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[nix_shell]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[nodejs]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)[](fg:#E5E5E5)[$symbol$version]($style)[](fg:#E5E5E5)"
+symbol = " "
+
+[package]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)[](fg:#E5E5E5)[$symbol$version]($style)[](fg:#E5E5E5)"
+
+[php]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[python]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)[](fg:#E5E5E5)[${symbol}${pyenv_prefix}${version}($virtualenv)]($style)[](fg:#E5E5E5)"
+symbol = " "
+
+[lua]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)[](fg:#E5E5E5)[${symbol}${version}]($style)[](fg:#E5E5E5)"
+symbol = " "
+
+[ruby]
+#disabled = true
+style = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = " "
+
+[rust]
+#disabled = true
+tyle = "bg:#E5E5E5 fg:#171a1f"
+format = "($style)"
+symbol = "  "
+
