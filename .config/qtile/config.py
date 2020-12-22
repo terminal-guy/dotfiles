@@ -162,8 +162,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 6,
-                "border_focus": "e1acff",
-                "border_normal": "1D2330"
+                "border_focus": "#87dfeb",
+                "border_normal": "#1D2330"
                 }
 
 layouts = [
