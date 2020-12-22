@@ -87,14 +87,23 @@ keys = [
         lazy.layout.normalize(),
         desc='normalize window size ratios'
         ),
+    Key([mod, "control"], "e",
+        lazy.spawn("./.dmenu/dmenu-edit-configs.sh"),
+        desc='gui macho'
+        ),
     Key([mod, "control"], "m",
         lazy.spawn("./.gui-man.sh"),
         desc='gui macho'
         ),
     Key([mod, "control"], "s",
         lazy.spawn("./.dmenu/dmenu-scrot.sh"),
-        desc='gui macho'
+        desc='scrot screenshot utils'
         ),
+    Key([mod], "p",
+        lazy.spawn("./.dmenu/dmenu-webpages.sh"),
+        desc='dmenu webpages script'
+        ),
+
     Key([mod], "m",
         lazy.layout.maximize(),
         desc='toggle window between minimum and maximum sizes'
@@ -117,6 +126,20 @@ keys = [
         lazy.layout.toggle_split(),
         desc='Toggle between split and unsplit sides of stack'
         ),
+    # Change the volume if your keyboard has special volume keys.
+    Key(
+        [], "XF86AudioRaiseVolume",
+        lazy.spawn("amixer -c 0 -q set Master 2dB+")
+    ),
+    Key(
+        [], "XF86AudioLowerVolume",
+        lazy.spawn("amixer -c 0 -q set Master 2dB-")
+    ),
+    Key(
+        [], "XF86AudioMute",
+        lazy.spawn("amixer -c 0 -q set Master toggle")
+    ),
+
 ]
 
 group_names = [(" ", {'layout': 'monadtall'}),
