@@ -198,7 +198,7 @@ layouts = [
         panel_width=320
     ),
     layout.Floating(
-        border_focus='#EC6798',
+        border_focus='#87dfeb',
         border_normal='#000000',
         border_width=2,
     )
