@@ -143,11 +143,11 @@ keys = [
 ]
 
 group_names = [(" ", {'layout': 'monadtall'}),
-               ("  ", {'layout': 'monadtall'}),
+               (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
-               (" ", {'layout': 'monadtall'}),
-               (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
+               (" ", {'layout': 'monadtall'}),
+               (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'matrix'}),
                (" ", {'layout': 'floating'})]
