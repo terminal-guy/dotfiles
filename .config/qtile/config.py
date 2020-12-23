@@ -178,7 +178,11 @@ layouts = [
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
     # layout.Tile(shift_windows=True, **layout_theme),
-    # layout.Stack(num_stacks=2),
+    layout.Stack(
+        num_stacks=2,
+        border_normal='#000000',
+        border_focus='#87dfeb',
+        ),
     layout.TreeTab(
         font="mononoki Nerd Font",
         fontsize=10,
