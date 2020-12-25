@@ -421,7 +421,7 @@ def init_widgets_screen2():
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=23)),
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=25,margin=15)),
             ]
 
 
@@ -482,6 +482,7 @@ cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Deadd-notification-center'},
     {'wmclass': 'confirm'},
+    {'wmclass': 'feh'},
     {'wmclass': 'dialog'},
     {'wmclass': 'download'},
     {'wmclass': 'error'},
