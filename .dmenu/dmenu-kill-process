@@ -6,11 +6,11 @@ selected="$(ps -a -u $USER | \
 
 if [[ ! -z $selected ]]; then
 
-    answer="$(echo -e "Yes\nNo" | \
+    answer="$(echo -e "Y\nN" | \
             dmenu -i -p "$selected will be killed, are you sure?" \
             )"
 
-    if [[ $answer == "Yes" ]]; then
+    if [[ $answer == "Y" ]]; then
         selpid="$(awk '{print $1}' <<< $selected)"; 
         kill -9 $selpid
     fi
