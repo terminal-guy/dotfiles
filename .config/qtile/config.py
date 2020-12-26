@@ -482,6 +482,7 @@ cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Deadd-notification-center'},
     {'wmclass': 'confirm'},
+    {'wmclass': 'jetbrains-studio'},
     {'wmclass': 'feh'},
     {'wmclass': 'dialog'},
     {'wmclass': 'download'},
