@@ -39,8 +39,9 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
-editor = os.getenv("EDITOR") or "nano"
+editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
+launcher = "rofi -show drun"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -48,6 +49,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+shiftkey = "Shift"
 -- }}}
 
 -- {{{ Menu
@@ -78,17 +80,17 @@ tag.connect_signal("request::default_layouts", function()
     awful.layout.append_default_layouts({
         awful.layout.suit.floating,
         awful.layout.suit.tile,
-        awful.layout.suit.tile.left,
-        awful.layout.suit.tile.bottom,
-        awful.layout.suit.tile.top,
-        awful.layout.suit.fair,
-        awful.layout.suit.fair.horizontal,
-        awful.layout.suit.spiral,
-        awful.layout.suit.spiral.dwindle,
+ --       awful.layout.suit.tile.left,
+ --     awful.layout.suit.tile.bottom,
+ --       awful.layout.suit.tile.top,
+ --       awful.layout.suit.fair,
+ --       awful.layout.suit.fair.horizontal,
+ --       awful.layout.suit.spiral,
+ --       awful.layout.suit.spiral.dwindle,
         awful.layout.suit.max,
         awful.layout.suit.max.fullscreen,
-        awful.layout.suit.magnifier,
-        awful.layout.suit.corner.nw,
+ --     awful.layout.suit.magnifier,
+ --     awful.layout.suit.corner.nw,
     })
 end)
 -- }}}
@@ -174,7 +176,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     -- Add widgets to the wibox
     s.mywibox.widget = {
         layout = wibox.layout.align.horizontal,
-        { -- Left widgets
+        { -- Left widget
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
             s.mytaglist,
@@ -208,7 +210,7 @@ awful.keyboard.append_global_keybindings({
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
-    awful.key({ modkey, "Control" }, "r", awesome.restart,
+    awful.key({ modkey, shiftkey }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
@@ -225,8 +227,8 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "p", function() menubar.show() end,
+              {description = "Rofi run launcher", group = "launcher"}),
+    awful.key({ modkey }, "p", function() awful.spawn(launcher) end,
               {description = "show the menubar", group = "launcher"}),
 })
 
@@ -551,3 +553,8 @@ end)
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
+
+
+awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("~/.fehbg")
+awful.spawn.with_shell("dunst")
