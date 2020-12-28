@@ -417,9 +417,9 @@ local function create_url_petal(text, bg_color, hover_color, url, tl, tr, br, bl
 end
 
 -- Create the containers
-local petal_top_left = create_url_petal("GH", x.color4, x.color12, "https://github.com/elenapan/dotfiles", true, true, false, true)
+local petal_top_left = create_url_petal("GH", x.color4, x.color12, "https://github.com/terminal-guy", true, true, false, true)
 local petal_top_right = create_url_petal("YT", x.color1, x.color9, "https://youtube.com/", true, true, true, false)
-local petal_bottom_right = create_url_petal("4C", x.color2, x.color10, "https://4chan.org/",false, true, true, true)
+local petal_bottom_right = create_url_petal("DT", x.color2, x.color10, "https://github.com/terminal-guy/dotfiles",false, true, true, true)
 local petal_bottom_left = create_url_petal("RD", x.color3, x.color11, "https://reddit.com/",true, false, true, true)
 
 -- Add clickable effects on hover

@@ -267,7 +267,7 @@ end
 local urls = wibox.widget {
     create_url("4CHAN", "4chan.org"),
     create_url("REDDIT", "reddit.com"),
-    create_url("GITHUB", "github.com/elenapan"),
+    create_url("GITHUB", "github.com/terminal-guy"),
     spacing = dpi(10),
     layout = wibox.layout.fixed.vertical
 }
