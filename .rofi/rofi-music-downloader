@@ -3,8 +3,11 @@ cmd="rofi -dmenu"
 youtube_dl="youtube-dl -x --embed-thumbnail --audio-format mp3"
 music_directory="cd /home/va/music/"
 
+
+rofi_prompt="YouTube ❯"
+
 while [ -z "$query" ]; do
-query=$(echo "" | $cmd -p "  $engine") || exit
+query=$(echo "" | $cmd -p $rofi_prompt) || exit
 done
 
 main(){
