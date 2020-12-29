@@ -51,6 +51,10 @@ alias pacout="sudo pacman -Rcs"
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 
+# youtube-dl
+
+alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
+
 # export PATH="$PATH:/home/va/.source/development/flutter/bin"
 
 
