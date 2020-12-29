@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+cmd="rofi -dmenu"
+youtube_dl="youtube-dl -x --embed-thumbnail --audio-format mp3"
+music_directory="cd /home/va/music/"
+
+while [ -z "$query" ]; do
+query=$(echo "" | $cmd -p "  $engine") || exit
+done
+
+main(){
+    $music_directory && $youtube_dl $query
+}
+
+main &
+exit 0 
