@@ -11,7 +11,7 @@ from typing import List  # noqa: F401
 mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
 ctrl = "control"
 altkey = "mod1"
-myTerm = "kitty"                             # My terminal of choice
+myTerm = "alacritty"                             # My terminal of choice
 myConfig = "/home/va/.config/qtile/config.py"    # The Qtile config file location
 keys = [
     # The essentials
@@ -88,7 +88,7 @@ keys = [
         desc='normalize window size ratios'
         ),
     Key([mod, "control"], "e",
-        lazy.spawn("./.dmenu/dmenu-edit-configs.sh"),
+        lazy.spawn("./.rofi/rofi_edit_any_files"),
         desc='gui macho'
         ),
     Key([mod, "control"], "m",
@@ -99,11 +99,6 @@ keys = [
         lazy.spawn("./.dmenu/dmenu-scrot.sh"),
         desc='scrot screenshot utils'
         ),
-    Key([mod], "p",
-        lazy.spawn("./.dmenu/dmenu-webpages.sh"),
-        desc='dmenu webpages script'
-        ),
-
     Key([mod], "m",
         lazy.layout.maximize(),
         desc='toggle window between minimum and maximum sizes'
@@ -501,7 +496,12 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 
-floating_layout = layout.Floating(float_rules=[
+floating_layout = layout.Floating(
+        border_focus='#87dfeb',
+        border_normal='#000000',
+        border_width=2,
+
+    float_rules=[
     {'wmclass': 'Deadd-notification-center'},
     {'wmclass': 'confirm'},
     {'wmclass': 'python3.9'},
