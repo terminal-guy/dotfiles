@@ -2,7 +2,7 @@ import os
 import re
 import socket
 import subprocess
-from libqtile.config import KeyChord, Key, Screen, Group, Drag, Click
+from libqtile.config import KeyChord, Key, Screen, Group, Drag, Click, ScratchPad, DropDown
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
@@ -464,6 +464,26 @@ def switch_screens(qtile):
     i = qtile.screens.index(qtile.current_screen)
     group = qtile.screens[i - 1].group
     qtile.current_screen.set_group(group)
+
+
+groups.append(
+    ScratchPad("scratchpad", [
+        # define a drop down terminal.
+        # it is placed in the upper third of screen by default.
+        DropDown("term", "/usr/bin/kitty", opacity=0.88, height=0.55, width=0.80, on_focus_lost_hide=True ),
+        DropDown("mocp", "kitty -o font_size=10 -e mocp", x=0.25, y=0.2, width=0.4, height=0.5, opacity=0.9, )
+   #      DropDown("qshell", "kitty -e qshell",
+   #              x=0.05, y=0.4, width=0.9, height=0.6, opacity=0.9,
+   #              on_focus_lost_hide=True)
+]), )
+
+keys.extend([
+    # Scratchpad
+    # toggle visibiliy of above defined DropDown named "term"
+   # Key([], 'F11', lazy.group['scratchpad'].dropdown_toggle('qshell')),
+    Key([mod, "shift"], "p", lazy.group['scratchpad'].dropdown_toggle('mocp')),
+    Key([], 'F12', lazy.group['scratchpad'].dropdown_toggle('term')),
+])
 
 
 mouse = [
