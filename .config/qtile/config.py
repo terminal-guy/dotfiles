@@ -392,6 +392,8 @@ def init_widgets_list():
         widget.Clock(
             foreground=colors[2],
             background=colors[5],
+            mouse_callbacks={'Button1': lambda qtile:
+            qtile.cmd_spawn('/home/va/.rofi/rofi-music-downloader')},
             format="%A, %B %d  [ %H:%M ]"
         ),
         widget.Sep(
@@ -482,6 +484,7 @@ cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Deadd-notification-center'},
     {'wmclass': 'confirm'},
+    {'wmclass': 'python3.9'},
     {'wmclass': 'jetbrains-studio'},
     {'wmclass': 'feh'},
     {'wmclass': 'dialog'},
