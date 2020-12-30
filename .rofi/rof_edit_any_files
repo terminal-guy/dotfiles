@@ -8,6 +8,20 @@ dir="$HOME/.config"
 # Ignore files or directories relative to the directory you want to search
 ignore="
 chromium
+qtile/icons
+qtile/__pycache__
+cava
+discord
+Code
+coc
+configstore
+dconf
+libfm
+pulse
+xfce4
+procps
+Google
+calibre
 enchant
 mpv/watch_later
 ncmpcpp/lyrics
