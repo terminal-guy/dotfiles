@@ -20,7 +20,7 @@ keys = [
         desc='Launches My Terminal'
         ),
     Key([mod, "shift"], "Return",
-        lazy.spawn("dmenu_run -c -bw 2 -l 20 -g 4"),
+        lazy.spawn("rofi -show drun"),
         desc='Dmenu Run Launcher'
         ),
     Key([mod], "Tab",
