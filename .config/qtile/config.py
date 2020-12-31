@@ -238,12 +238,18 @@ def init_widgets_list():
             foreground=colors[6],
             background=colors[6]
         ),
-        #  widget.Image(
-        #          filename = "~/.config/qtile/icons/python.png",
-        #          mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')},
-        #          background = colors[6],
-        #          foreground = colors[6]
-        #         ),
+         widget.Image(
+                 filename = "~/.config/qtile/icons/qtile.png",
+               mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')},
+                 background = colors[6],
+                 foreground = colors[6]
+                ),
+        widget.Sep(
+            linewidth=0,
+            padding=10,
+            foreground=colors[2],
+            background=colors[6]
+        ),
         widget.GroupBox(
             font="Font Awesome 5 Free",
             fontsize=14,
@@ -280,6 +286,7 @@ def init_widgets_list():
         widget.WindowName(
             foreground=colors[6],
             background=colors[0],
+            font="JetBrains Mono Medium",
             padding=0
         ),
         # widget.Clipboard(
