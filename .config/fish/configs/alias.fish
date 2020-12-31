@@ -39,6 +39,9 @@ alias pacin="sudo pacman -S"
 alias pacout="sudo pacman -Rcs"
 
 
+alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
+
+
 
 # git alias
 
