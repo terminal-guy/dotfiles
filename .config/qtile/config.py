@@ -324,7 +324,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[4],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.TextBox(
             text=" ",
@@ -344,7 +344,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[5],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.TextBox(
             text=" ",
@@ -376,7 +376,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[4],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.CurrentLayoutIcon(
             custom_icon_paths=[os.path.expanduser(
@@ -397,7 +397,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[5],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.Clock(
             foreground=colors[2],
