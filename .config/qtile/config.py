@@ -413,8 +413,15 @@ def init_widgets_list():
             background=colors[5]
         ),
         widget.Systray(
-            background=colors[0],
+            background=colors[5],
+            foreground=colors[2],
             padding=5
+        ),
+        widget.Sep(
+            linewidth=0,
+            padding=10,
+            foreground=colors[2],
+            background=colors[5]
         ),
     ]
     return widgets_list
