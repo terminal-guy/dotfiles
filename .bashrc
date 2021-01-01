@@ -92,4 +92,3 @@ alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; e
 source ~/.config/bashrc/simple-but-cool.sh
 
 #exec fish
-pfetch
