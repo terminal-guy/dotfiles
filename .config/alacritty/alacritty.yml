@@ -428,10 +428,10 @@ background_opacity: 0.96
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  program: /bin/fish
-  args:
-    - --login
+#shell:
+#  program: /bin/fish
+  #  args:
+          #    - --login
 
 # Startup directory
 #
