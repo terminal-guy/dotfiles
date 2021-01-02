@@ -16,6 +16,7 @@
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
+export PATH="$HOME/bin:$PATH"
 #    _    _ _
 #   / \  | (_) __ _ ___
 #  / _ \ | | |/ _` / __|
@@ -92,3 +93,9 @@ alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; e
 source ~/.config/bashrc/simple-but-cool.sh
 
 #exec fish
+#source "$HOME/.cargo/env"
+
+eval "$(starship init bash)"
+
+
+
