@@ -95,7 +95,7 @@ source ~/.config/bashrc/simple-but-cool.sh
 #exec fish
 #source "$HOME/.cargo/env"
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 
 
 
