@@ -79,7 +79,7 @@ alias spectr="startx /usr/bin/spectrwm"
 # for doom emacs
 
 alias doom="~/.emacs.d/bin/doom"
-
+alias emacst="emacs --no-window-system"
 #colorscript random
 
 #alias clear='clear; echo; echo;  spark 0 30 55 80 33 150 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 15 | lolcat; echo; echo'

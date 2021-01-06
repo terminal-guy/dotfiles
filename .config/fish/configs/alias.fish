@@ -41,6 +41,7 @@ alias pacout="sudo pacman -Rcs"
 
 alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
 
+alias emacst="emacs --no-window-system"
 
 
 # git alias
