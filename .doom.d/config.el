@@ -41,11 +41,15 @@
 ;; change `org-directory'. It must be set before org loads!
 (after! org
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(setq org-directory "~/Org/"
+(setq org-directory "~/Org/*"
       org-agenda-files '("~/Org/agenda.org")
       org-ellipsis " ▼ "
+
       org-hide-emphasis-markers t
-))
+)
+ (setq org-log-done 'time)
+)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
