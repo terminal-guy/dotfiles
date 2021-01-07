@@ -524,6 +524,7 @@ floating_layout = layout.Floating(
         border_width=2,
 
     float_rules=[
+    {'wmclass': 'Pcmanfm'},
     {'wmclass': 'Lxpolkit'},
     {'wmclass': 'Steam'},
     {'wmclass': 'Deadd-notification-center'},
