@@ -11,12 +11,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# sets vim as manpager
+# Sets Neovim as MANPAGER 
 
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
+
 export PATH="$HOME/bin:$PATH"
+
+
+
 #    _    _ _
 #   / \  | (_) __ _ ___
 #  / _ \ | | |/ _` / __|
