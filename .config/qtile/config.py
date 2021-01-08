@@ -487,8 +487,8 @@ groups.append(
     ScratchPad("scratchpad", [
         # define a drop down terminal.
         # it is placed in the upper third of screen by default.
-        DropDown("term", "/usr/bin/kitty", opacity=0.88, height=0.55, width=0.80, on_focus_lost_hide=True ),
-        DropDown("mocp", "kitty -o font_size=10 -e mocp", x=0.25, y=0.2, width=0.4, height=0.5, opacity=0.9, )
+        DropDown("term", "/usr/bin/alacritty", opacity=0.88, height=0.55, width=0.80, on_focus_lost_hide=True ),
+        DropDown("mocp", "alacritty -o font_size=10 -e mocp", x=0.25, y=0.2, width=0.4, height=0.5, opacity=0.9, )
    #      DropDown("qshell", "kitty -e qshell",
    #              x=0.05, y=0.4, width=0.9, height=0.6, opacity=0.9,
    #              on_focus_lost_hide=True)
