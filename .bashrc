@@ -64,7 +64,7 @@ alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
 
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls='exa -al --color=always --group-directories-first --icons' # my preferred listing
 alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
@@ -89,6 +89,12 @@ alias emacst="emacs --no-window-system"
 #alias clear='clear; echo; echo;  spark 0 30 55 80 33 150 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 15 | lolcat; echo; echo'
 
 alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo' # Coloured
+
+#
+# BTW I USE SNAPS>>>>>>:/
+#
+alias lsblk='lsblk | grep -v snap'
+
 
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
 #exec fish
