@@ -152,7 +152,7 @@ group_names = [(" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
-               (" ", {'layout': 'matrix'}),
+               (" ", {'layout': 'floating'}),
                (" ", {'layout': 'floating'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -176,7 +176,7 @@ layouts = [
     # layout.Columns(**layout_theme),
     # layout.RatioTile(**layout_theme),
     # layout.VerticalTile(**layout_theme),
-    layout.Matrix(**layout_theme),
+    #layout.Matrix(**layout_theme),
     # layout.Zoomy(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
