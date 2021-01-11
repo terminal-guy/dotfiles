@@ -1,3 +1,0 @@
-#/bin/bash
-
-pgrep redshift > /dev/null && (pkill redshift && echo 'OFF') || (echo 'ON' && redshift -l 0:0 -t 3700:3700 -r &>/dev/null &)
