@@ -528,6 +528,7 @@ floating_layout = layout.Floating(
     {'wmclass': 'Lxpolkit'},
     {'wmclass': 'Steam'},
     {'wmclass': 'Deadd-notification-center'},
+    {'wmclass':  'Sxiv'},
     {'wmclass': 'confirm'},
     {'wmclass': 'python3.9'},
     {'wmclass': 'jetbrains-studio'},
