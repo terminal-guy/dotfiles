@@ -61,10 +61,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2 
+    #frame_width = 2 
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    #frame_color = "#aaaaaa"
 
     # Define a color for the separator.
     # possible values are:
@@ -274,14 +274,14 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2F343F"
+    background = "#18191a"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     icon = /home/va/.config/dunst/normal.png
 
 [urgency_normal]
-    background = "#2F343F"
+    background = "#18191a"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
