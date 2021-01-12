@@ -95,10 +95,6 @@ keys = [
         lazy.spawn("./.gui-man.sh"),
         desc='gui macho'
         ),
-    Key([mod, "control"], "d",
-        lazy.spawn("redshift -O 3500"),
-        desc='gui macho'
-        ),
     Key([mod, "control"], "s",
         lazy.spawn("./.dmenu/dmenu-scrot.sh"),
         desc='scrot screenshot utils'
