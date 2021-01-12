@@ -4,6 +4,58 @@
 ;; sync' after modifying this file!
 
 
+(require 'exwm)
+(require 'exwm-config)
+(exwm-config-default)
+(require 'exwm-randr)
+(exwm-randr-enable)
+(require 'exwm-systemtray)
+(exwm-systemtray-enable)
+
+
+
+(setq exwm-workspace-number 10
+
+     exwm-input-prefix-keys '(?\M-x
+                              ?\M-:)
+     exwm-input-simulation-keys '(([?\s-f] . [?\C-f])([?\s-w] . [?\C-w]))
+
+ )
+
+ (setq exwm-input-global-keys
+        `(
+          ;; Reset to line-mode (C-c C-k switches to char-mode via exwm-input-release-keyboard)
+          ([?\s-r] . exwm-reset)
+
+          ;; Move between windows
+          ([s-j] . windmove-left)
+          ([s-k] . windmove-right)
+          ([s-h] . windmove-up)
+          ([s-l] . windmove-down)
+
+          ;; Launch applications via shell command
+          ([?\s-&] . (lambda (command)
+                       (interactive (list (read-shell-command "$ ")))
+                       (start-process-shell-command command nil command)))
+
+          ;; Switch workspace
+          ([?\s-w] . exwm-workspace-switch)
+
+          ;; 's-N': Switch to certain workspace with Super (Win) plus a number key (0 - 9)
+          ,@(mapcar (lambda (i)
+                      `(,(kbd (format "s-%d" i)) .
+                        (lambda ()
+                          (interactive)
+                          (exwm-workspace-switch-create ,i))))
+                    (number-sequence 0 9))))
+
+  (exwm-enable)
+
+
+
+
+
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Vishal Adhithya"
@@ -35,7 +87,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-one)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
