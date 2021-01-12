@@ -107,5 +107,3 @@ source ~/.config/bashrc/simple-but-cool.sh
 
 #eval "$(starship init bash)"
 
-
-
