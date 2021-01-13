@@ -161,7 +161,7 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 6,
-                "border_focus": "#87dfeb",
+                "border_focus": "#FFFFFF",
                 "border_normal": "#1D2330"
                 }
 
@@ -180,7 +180,7 @@ layouts = [
     layout.Stack(
         num_stacks=2,
         border_normal='#000000',
-        border_focus='#87dfeb',
+        border_focus='#FFFFFF',
         ),
     layout.TreeTab(
         font="mononoki Nerd Font",
@@ -197,7 +197,7 @@ layouts = [
         panel_width=320
     ),
     layout.Floating(
-        border_focus='#87dfeb',
+        border_focus='#FFFFFF',
         border_normal='#000000',
         border_width=2,
     )
@@ -207,10 +207,10 @@ colors = [["#171a1f", "#171a1f"],  # panel background
           ["#434758", "#434758"],  # background for current screen tab
           ["#000000", "#000000"],  # font color for group names
 
-          ["#87dfeb", "#87dfeb"],  # border line color for other tab and odd widgets
+          ["#700C28", "#700C28"],  # border line color for other tab and odd widgets
 
-          ["#bd99ff", "#bd99ff"],  # color for the even widgets
-          ["#985EFF", "#985EFF"],  # border line color for current tab
+          ["#E0131A", "#E0131A"],  # color for the even widgets
+          ["#FFFFFF", "#FFFFFF"],  # border line color for current tab
 
           ["#f8f8f2", "#f8f8f2"]]  # window name
 
@@ -235,7 +235,7 @@ def init_widgets_list():
             background=colors[6]
         ),
          widget.Image(
-                 filename = "~/.config/qtile/icons/qtile.png",
+                 filename = "~/.config/qtile/icons/mile-logo.png",
                mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')},
                  background = colors[6],
                  foreground = colors[6]
@@ -436,7 +436,7 @@ def init_widgets_screen2():
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=25,margin=15)),
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.9, size=25,margin=15)),
             ]
 
 
