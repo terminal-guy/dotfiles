@@ -28,6 +28,7 @@ V='#ff79c6E6'  # verifying
 --bshlcolor=$W        \
 \
 --screen 1            \
+--greetertext="Hi VA"      \
 --blur 5              \
 --clock               \
 --indicator           \
