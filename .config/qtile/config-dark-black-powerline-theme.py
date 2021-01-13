@@ -2,7 +2,7 @@ import os
 import re
 import socket
 import subprocess
-from libqtile.config import KeyChord, Key, Screen, Group, Drag, Click
+from libqtile.config import KeyChord, Key, Screen, Group, Drag, Click, ScratchPad, DropDown
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
@@ -11,7 +11,7 @@ from typing import List  # noqa: F401
 mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
 ctrl = "control"
 altkey = "mod1"
-myTerm = "kitty"                             # My terminal of choice
+myTerm = "alacritty"                             # My terminal of choice
 myConfig = "/home/va/.config/qtile/config.py"    # The Qtile config file location
 keys = [
     # The essentials
@@ -20,7 +20,7 @@ keys = [
         desc='Launches My Terminal'
         ),
     Key([mod, "shift"], "Return",
-        lazy.spawn("dmenu_run -c -bw 2 -l 20 -g 4"),
+        lazy.spawn("rofi -show drun"),
         desc='Dmenu Run Launcher'
         ),
     Key([mod], "Tab",
@@ -88,7 +88,7 @@ keys = [
         desc='normalize window size ratios'
         ),
     Key([mod, "control"], "e",
-        lazy.spawn("./.dmenu/dmenu-edit-configs.sh"),
+        lazy.spawn("./.rofi/rofi_edit_any_files"),
         desc='gui macho'
         ),
     Key([mod, "control"], "m",
@@ -99,11 +99,10 @@ keys = [
         lazy.spawn("./.dmenu/dmenu-scrot.sh"),
         desc='scrot screenshot utils'
         ),
-    Key([mod], "p",
-        lazy.spawn("./.dmenu/dmenu-webpages.sh"),
-        desc='dmenu webpages script'
+    Key([mod, "control"], "c",
+        lazy.spawn("./bin/colorpicker"),
+        desc='scrot screenshot utils'
         ),
-
     Key([mod], "m",
         lazy.layout.maximize(),
         desc='toggle window between minimum and maximum sizes'
@@ -143,13 +142,13 @@ keys = [
 ]
 
 group_names = [(" ", {'layout': 'monadtall'}),
-               ("  ", {'layout': 'monadtall'}),
+               (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
-               (" ", {'layout': 'monadtall'}),
-               (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
+               (" ", {'layout': 'monadtall'}),
+               (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
-               (" ", {'layout': 'matrix'}),
+               (" ", {'layout': 'floating'}),
                (" ", {'layout': 'floating'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -162,8 +161,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 6,
-                "border_focus": "e1acff",
-                "border_normal": "1D2330"
+                "border_focus": "#87dfeb",
+                "border_normal": "#1D2330"
                 }
 
 layouts = [
@@ -173,12 +172,16 @@ layouts = [
     # layout.Columns(**layout_theme),
     # layout.RatioTile(**layout_theme),
     # layout.VerticalTile(**layout_theme),
-    layout.Matrix(**layout_theme),
+    #layout.Matrix(**layout_theme),
     # layout.Zoomy(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
     # layout.Tile(shift_windows=True, **layout_theme),
-    # layout.Stack(num_stacks=2),
+    layout.Stack(
+        num_stacks=2,
+        border_normal='#000000',
+        border_focus='#87dfeb',
+        ),
     layout.TreeTab(
         font="mononoki Nerd Font",
         fontsize=10,
@@ -194,7 +197,7 @@ layouts = [
         panel_width=320
     ),
     layout.Floating(
-        border_focus='#EC6798',
+        border_focus='#87dfeb',
         border_normal='#000000',
         border_width=2,
     )
@@ -231,12 +234,18 @@ def init_widgets_list():
             foreground=colors[6],
             background=colors[6]
         ),
-        #  widget.Image(
-        #          filename = "~/.config/qtile/icons/python.png",
-        #          mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')},
-        #          background = colors[6],
-        #          foreground = colors[6]
-        #         ),
+         widget.Image(
+                 filename = "~/.config/qtile/icons/qtile.png",
+               mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')},
+                 background = colors[6],
+                 foreground = colors[6]
+                ),
+        widget.Sep(
+            linewidth=0,
+            padding=10,
+            foreground=colors[2],
+            background=colors[6]
+        ),
         widget.GroupBox(
             font="Font Awesome 5 Free",
             fontsize=14,
@@ -273,6 +282,7 @@ def init_widgets_list():
         widget.WindowName(
             foreground=colors[6],
             background=colors[0],
+            font="JetBrains Mono Medium",
             padding=0
         ),
         # widget.Clipboard(
@@ -310,7 +320,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[4],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.TextBox(
             text=" ",
@@ -330,7 +340,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[5],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.TextBox(
             text=" ",
@@ -362,7 +372,7 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[4],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.CurrentLayoutIcon(
             custom_icon_paths=[os.path.expanduser(
@@ -383,11 +393,13 @@ def init_widgets_list():
             font='Font Awesome 5 Free',
             foreground=colors[5],
             padding=0,
-            fontsize=37
+            fontsize=48
         ),
         widget.Clock(
             foreground=colors[2],
             background=colors[5],
+            mouse_callbacks={'Button1': lambda qtile:
+            qtile.cmd_spawn('/home/va/.rofi/rofi-music-downloader')},
             format="%A, %B %d  [ %H:%M ]"
         ),
         widget.Sep(
@@ -397,8 +409,15 @@ def init_widgets_list():
             background=colors[5]
         ),
         widget.Systray(
-            background=colors[0],
+            background=colors[5],
+            foreground=colors[2],
             padding=5
+        ),
+        widget.Sep(
+            linewidth=0,
+            padding=10,
+            foreground=colors[2],
+            background=colors[5]
         ),
     ]
     return widgets_list
@@ -417,7 +436,7 @@ def init_widgets_screen2():
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=25,margin=15)),
             ]
 
 
@@ -460,6 +479,26 @@ def switch_screens(qtile):
     qtile.current_screen.set_group(group)
 
 
+groups.append(
+    ScratchPad("scratchpad", [
+        # define a drop down terminal.
+        # it is placed in the upper third of screen by default.
+        DropDown("term", "/usr/bin/alacritty", opacity=0.88, height=0.55, width=0.80, on_focus_lost_hide=True ),
+        DropDown("mocp", "alacritty -o font_size=10 -e mocp", x=0.25, y=0.2, width=0.4, height=0.5, opacity=0.9, )
+   #      DropDown("qshell", "kitty -e qshell",
+   #              x=0.05, y=0.4, width=0.9, height=0.6, opacity=0.9,
+   #              on_focus_lost_hide=True)
+]), )
+
+keys.extend([
+    # Scratchpad
+    # toggle visibiliy of above defined DropDown named "term"
+   # Key([], 'F11', lazy.group['scratchpad'].dropdown_toggle('qshell')),
+    Key([mod, "shift"], "p", lazy.group['scratchpad'].dropdown_toggle('mocp')),
+    Key([], 'F12', lazy.group['scratchpad'].dropdown_toggle('term')),
+])
+
+
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(),
          start=lazy.window.get_position()),
@@ -475,9 +514,21 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 
-floating_layout = layout.Floating(float_rules=[
+floating_layout = layout.Floating(
+        border_focus='#87dfeb',
+        border_normal='#000000',
+        border_width=2,
+
+    float_rules=[
+    {'wmclass': 'Pcmanfm'},
+    {'wmclass': 'Lxpolkit'},
+    {'wmclass': 'Steam'},
     {'wmclass': 'Deadd-notification-center'},
+    {'wmclass':  'Sxiv'},
     {'wmclass': 'confirm'},
+    {'wmclass': 'python3.9'},
+    {'wmclass': 'jetbrains-studio'},
+    {'wmclass': 'feh'},
     {'wmclass': 'dialog'},
     {'wmclass': 'download'},
     {'wmclass': 'error'},
