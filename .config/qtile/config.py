@@ -39,6 +39,10 @@ keys = [
         lazy.shutdown(),
         desc='Shutdown Qtile'
         ),
+     Key([mod, altkey], "l",
+        lazy.spawn("./bin/lock"),
+        desc='Doom Emacs'
+        ),
     Key([ctrl, altkey], "Delete",
         lazy.spawn("xkill"),
         desc='Doom Emacs'
@@ -95,12 +99,12 @@ keys = [
         lazy.spawn("./.gui-man.sh"),
         desc='gui macho'
         ),
-    Key([mod, "control"], "s",
+     Key([mod, "control"], "s",
         lazy.spawn("./.dmenu/dmenu-scrot.sh"),
         desc='scrot screenshot utils'
         ),
     Key([mod, "control"], "c",
-        lazy.spawn("./bin/colorpicker"),
+        lazy.spawn("./bin/picker"),
         desc='scrot screenshot utils'
         ),
     Key([mod], "m",
