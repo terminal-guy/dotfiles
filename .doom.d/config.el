@@ -22,16 +22,17 @@
 
  )
 
-(exwm-input-set-key (kbd "s-R") #'exwm-reset)
-(exwm-input-set-key (kbd "s-x") #'exwm-input-toggle-keyboard)
+(exwm-input-set-key (kbd "s-R") #'exwm-restart)
+(exwm-input-set-key (kbd "s-r") #'exwm-reset)
 (exwm-input-set-key (kbd "s-j") #'windmove-left)
 (exwm-input-set-key (kbd "s-l") #'windmove-down)
 (exwm-input-set-key (kbd "s-h") #'windmove-up)
 (exwm-input-set-key (kbd "s-k") #'windmove-right)
 (exwm-input-set-key (kbd "s-C") #'kill-this-buffer)
-(exwm-input-set-key (kbd "s-d") #'dmenu)
+(exwm-input-set-key (kbd "s-p") #'dmenu)
 (exwm-input-set-key (kbd "s-b") #'list-buffers)
 (exwm-input-set-key (kbd "s-f") #'find-file)
+(exwm-input-set-key (kbd "s-Q") #'kill-emacs)
 
 
 
