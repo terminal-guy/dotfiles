@@ -22,35 +22,16 @@
 
  )
 
- (setq exwm-input-global-keys
-        `(
-          ;; Reset to line-mode (C-c C-k switches to char-mode via exwm-input-release-keyboard)
-          ([?\s-r] . exwm-reset)
-
-          ;; Move between windows
-          ([s-j] . windmove-left)
-          ([s-k] . windmove-right)
-          ([s-h] . windmove-up)
-          ([s-l] . windmove-down)
-
-          ;; Launch applications via shell command
-          ([?\s-&] . (lambda (command)
-                       (interactive (list (read-shell-command "$ ")))
-                       (start-process-shell-command command nil command)))
-
-          ;; Switch workspace
-          ([?\s-w] . exwm-workspace-switch)
-
-          ;; 's-N': Switch to certain workspace with Super (Win) plus a number key (0 - 9)
-          ,@(mapcar (lambda (i)
-                      `(,(kbd (format "s-%d" i)) .
-                        (lambda ()
-                          (interactive)
-                          (exwm-workspace-switch-create ,i))))
-                    (number-sequence 0 9))))
-
-  (exwm-enable)
-
+(exwm-input-set-key (kbd "s-R") #'exwm-reset)
+(exwm-input-set-key (kbd "s-x") #'exwm-input-toggle-keyboard)
+(exwm-input-set-key (kbd "s-j") #'windmove-left)
+(exwm-input-set-key (kbd "s-l") #'windmove-down)
+(exwm-input-set-key (kbd "s-h") #'windmove-up)
+(exwm-input-set-key (kbd "s-k") #'windmove-right)
+(exwm-input-set-key (kbd "s-C") #'kill-this-buffer)
+(exwm-input-set-key (kbd "s-d") #'dmenu)
+(exwm-input-set-key (kbd "s-b") #'list-buffers)
+(exwm-input-set-key (kbd "s-f") #'find-file)
 
 
 
