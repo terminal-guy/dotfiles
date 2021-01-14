@@ -47,12 +47,13 @@ shopt -s checkwinsize # checks term size when bash regains control
 
 
 # pacman and yay
+alias pman='sudo pacman'
 alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
 alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
 alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 alias pacin="sudo pacman -S"
-alias pacout="sudo pacman -Rcs"
+alias pacout="sudo pacman -Rcns"
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 
