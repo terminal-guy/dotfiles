@@ -140,7 +140,7 @@ keys = [
     ),
     Key(
         [], "XF86AudioMute",
-        lazy.spawn("amixer -c 0 -q set Master toggle")
+        lazy.spawn("/usr/bin/pactl set-sink-mute 0 toggle")
     ),
 
 ]
