@@ -33,7 +33,8 @@
 (exwm-input-set-key (kbd "s-b") #'list-buffers)
 (exwm-input-set-key (kbd "s-f") #'find-file)
 (exwm-input-set-key (kbd "s-Q") #'kill-emacs)
-
+(exwm-input-set-key (kbd "s-M") #'exwm-layout-toggle-fullscreen)
+(exwm-input-set-key (kbd "s-F") #'exwm-floating-toggle-floating)
 
   (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
   (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
@@ -41,6 +42,15 @@
   (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 
+
+(defun me/exwm-autostart ()
+  "Set resolution for EXWM displays ie. workspaces."
+  (start-process-shell-command
+   "picom" nil "picom \
+--experimental-backends & \
+dunst & \
+~/.fehbg & \
+lxsession &"))
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
