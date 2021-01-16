@@ -145,7 +145,7 @@ keys = [
 
 ]
 
-group_names = [(" ", {'layout': 'monadtall'}),
+group_names = [(" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
                (" ", {'layout': 'monadtall'}),
