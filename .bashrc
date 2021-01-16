@@ -16,8 +16,8 @@
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
-
-export PATH="$HOME/bin:$PATH"
+export SCRIPT_PATH="$HOME/bin/"
+export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH"
 
 
 
@@ -65,8 +65,8 @@ alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
 
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first --icons' # my preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
+alias la='exa -al --color=always --group-directories-first --icons' # my preferred listing
+alias ls='exa -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a --icons | egrep "^\."'
