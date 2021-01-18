@@ -35,22 +35,34 @@
 (exwm-input-set-key (kbd "s-Q") #'kill-emacs)
 (exwm-input-set-key (kbd "s-M") #'exwm-layout-toggle-fullscreen)
 (exwm-input-set-key (kbd "s-F") #'exwm-floating-toggle-floating)
+(exwm-input-set-key (kbd "s-e") #'eshell)
 
-  (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
-  (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
-  (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
-  (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 95))
+(add-to-list 'default-frame-alist '(alpha . (95 . 95)))
+(set-frame-parameter (selected-frame) 'fullscreen 'maximized)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 
+(defun efs/run-in-background (command)
+  (let ((command-parts (split-string command "[ ]+")))
+    (apply #'call-process `(,(car command-parts) nil 0 nil ,@(cdr command-parts)))))
 
-(defun me/exwm-autostart ()
-  "Set resolution for EXWM displays ie. workspaces."
+
+(defun efs/set-wallpaper ()
+  (interactive)
+  ;; NOTE: You will need to update this to a valid background path!
   (start-process-shell-command
-   "picom" nil "picom \
---experimental-backends & \
-dunst & \
-~/.fehbg & \
-lxsession &"))
+      "feh" nil  "feh --bg-scale /home/va/Wallpapers/spiderman_miles.jpg"))
+
+
+  (efs/run-in-background "dunst")
+  (efs/run-in-background "picom --experimental-backends")
+  (efs/run-in-background "lxsession")
+
+
+
+  ;; Set the wallpaper after changing the resolution
+  (efs/set-wallpaper)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -102,7 +114,6 @@ lxsession &"))
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -119,3 +130,16 @@ lxsession &"))
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+
+
+(setq doom-modeline-modal-icon nil)
+(setq evil-echo-state nil)
+(setq evil-normal-state-tag   (propertize "[Normal]" 'face '((:background "green" :foreground "black")))
+      evil-emacs-state-tag    (propertize "[Emacs]" 'face '((:background "orange" :foreground "black")))
+      evil-insert-state-tag   (propertize "[Insert]" 'face '((:background "red") :foreground "white"))
+      evil-motion-state-tag   (propertize "[Motion]" 'face '((:background "blue") :foreground "white"))
+      evil-visual-state-tag   (propertize "[Visual]" 'face '((:background "grey80" :foreground "black")))
+      evil-operator-state-tag (propertize "[Operator]" 'face '((:background "purple"))))
+

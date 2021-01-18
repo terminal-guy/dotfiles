@@ -56,6 +56,7 @@
 (package! elfeed)
 (package! emms)
 (package! emojify)
+(package! mu4e)
 (package! evil-tutor)
 (package! ivy-posframe)
 (package! mastodon)
