@@ -1,6 +1,7 @@
 import os
 import re
 import socket
+import time
 import subprocess
 from libqtile.config import KeyChord, Key, Screen, Group, Drag, Click, ScratchPad, DropDown
 from libqtile.command import lazy
@@ -94,6 +95,10 @@ keys = [
     Key([mod, "control"], "e",
         lazy.spawn("./.rofi/rofi_edit_any_files"),
         desc='gui macho'
+        ),
+    Key([mod], "i",
+        lazy.spawn("st -e ./bin/pkgsearch"),
+        desc='pkgsearch'
         ),
     Key([mod, "control"], "m",
         lazy.spawn("./.gui-man.sh"),
@@ -525,6 +530,7 @@ floating_layout = layout.Floating(
 
     float_rules=[
     {'wmclass': 'Pcmanfm'},
+    {'wmclass': 'st-256color'},
     {'wmclass': 'Lxpolkit'},
     {'wmclass': 'Steam'},
     {'wmclass': 'Deadd-notification-center'},
