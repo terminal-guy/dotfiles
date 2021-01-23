@@ -10,7 +10,7 @@ if [[ ! -z $selected ]]; then
             rofi -dmenu -p "$selected will be killed, are you sure?" \
             )"
 
-    if [[ $answer == "Y" ]]; then
+    if [[ $answer == "y" ]]; then
         selpid="$(awk '{print $1}' <<< $selected)"; 
         kill -9 $selpid
     fi
