@@ -96,6 +96,7 @@ alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; e
 #
 alias lsblk='lsblk | grep -v snap'
 
+alias nvim-v='nvim --version  | grep -v Compilation'
 
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
 #exec fish
