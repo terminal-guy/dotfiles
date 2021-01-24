@@ -14,6 +14,9 @@ ctrl = "control"
 altkey = "mod1"
 myTerm = "alacritty"                             # My terminal of choice
 myConfig = "/home/va/.config/qtile/config.py"    # The Qtile config file location
+
+MydefaultGap = "45" 
+
 keys = [
     # The essentials
     Key([mod], "Return",
@@ -88,16 +91,16 @@ keys = [
         lazy.layout.decrease_nmaster(),
         desc='Shrink window (MonadTall), decrease number in master pane (Tile)'
         ),
-    Key([mod], "n",
-        lazy.layout.normalize(),
-        desc='normalize window size ratios'
-        ),
     Key([mod, "control"], "e",
         lazy.spawn("./.rofi/rofi_edit_any_files"),
         desc='gui macho'
         ),
     Key([mod], "i",
         lazy.spawn("st -e ./bin/pkgsearch"),
+        desc='pkgsearch'
+        ),
+    Key([mod], "n",
+        lazy.spawn("alacritty -e nvim"),
         desc='pkgsearch'
         ),
     Key([mod, "control"], "m",
@@ -174,6 +177,12 @@ layout_theme = {"border_width": 2,
                 "border_normal": "#1D2330"
                 }
 
+MonadTall_layout_theme = {"border_width": 2,
+                "margin": 6,
+                "border_focus": "#FFFFFF",
+                "border_normal": "#1D2330"
+                }
+
 layouts = [
     # layout.MonadWide(**layout_theme),
     # layout.Bsp(**layout_theme),
@@ -183,13 +192,13 @@ layouts = [
     # layout.VerticalTile(**layout_theme),
     #layout.Matrix(**layout_theme),
     # layout.Zoomy(**layout_theme),
-    layout.MonadTall(**layout_theme),
+    layout.MonadTall(**MonadTall_layout_theme),
     layout.Max(**layout_theme),
     # layout.Tile(shift_windows=True, **layout_theme),
     layout.Stack(
         num_stacks=2,
         border_normal='#000000',
-        border_focus='#FFFFFF',
+       border_focus='#FFFFFF',
         ),
     layout.TreeTab(
         font="mononoki Nerd Font",
