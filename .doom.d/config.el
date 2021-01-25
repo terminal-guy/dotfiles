@@ -66,8 +66,29 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
+
+
+
+;;  ███╗   ███╗██╗   ██╗██╗  ██╗███████╗
+;;  ████╗ ████║██║   ██║██║  ██║██╔════╝
+;;  ██╔████╔██║██║   ██║███████║█████╗
+;;  ██║╚██╔╝██║██║   ██║╚════██║██╔══╝
+;;  ██║ ╚═╝ ██║╚██████╔╝     ██║███████╗
+;;  ╚═╝     ╚═╝ ╚═════╝      ╚═╝╚══════╝
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+
 (setq user-full-name "Vishal Adhithya"
-      user-mail-address "vishaladhithya19@gmail.com")
+      user-mail-address "vishaladhithya19@gmail.com"
+      ;; I have my mbsyncrc in a different folder on my system, to keep it separate from the
+      ;; mbsyncrc available publicly in my dotfiles. You MUST edit the following line.
+      ;; Be sure that the following command is: "mbsync -c ~/.config/mu4e/mbsyncrc -a"
+      mu4e-get-mail-command "mbsync -a"
+      mu4e-update-interval  300
+      mu4e-main-buffer-hide-personal-addresses t
+      message-send-mail-function 'smtpmail-send-it
+      starttls-use-gnutls t
+      smtpmail-starttls-credentials '(("smtp.1and1.com" 587 nil nil)))
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
