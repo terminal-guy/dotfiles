@@ -64,6 +64,8 @@
 
 (setq doom-theme 'doom-city-lights)
 
+(setq fancy-splash-image "~/Pictures/doom-logo.png")
+
 
 
 ;; ██████╗ ██████╗  ██████╗     ███╗   ███╗ ██████╗ ██████╗ ███████╗
@@ -151,6 +153,11 @@
 (exwm-input-set-key (kbd "s-M") #'exwm-layout-toggle-fullscreen)
 (exwm-input-set-key (kbd "s-F") #'exwm-floating-toggle-floating)
 (exwm-input-set-key (kbd "s-e") #'eshell)
+(exwm-input-set-key (kbd "s-t") #'term)
+(exwm-input-set-key (kbd "s-J") #'+evil/window-move-left)
+(exwm-input-set-key (kbd "s-K") #'+evil/window-move-right)
+(exwm-input-set-key (kbd "s-H") #'+evil/window-move-up)
+(exwm-input-set-key (kbd "s-L") #'+evil/window-move-down)
 
 (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
 (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
