@@ -1,12 +1,12 @@
-#
 # ~/.bashrc
-#__     ___     _           _      _       _ _     _ _   _
-#\ \   / (_)___| |__   __ _| |    / \   __| | |__ (_) |_| |__  _   _  __ _
-# \ \ / /| / __| '_ \ / _` | |   / _ \ / _` | '_ \| | __| '_ \| | | |/ _` |
-#  \ V / | \__ \ | | | (_| | |  / ___ \ (_| | | | | | |_| | | | |_| | (_| |
-#   \_/  |_|___/_| |_|\__,_|_| /_/   \_\__,_|_| |_|_|\__|_| |_|\__, |\__,_|
-#                                                             |___/
 #
+# ██╗   ██╗ █████╗
+# ██║   ██║██╔══██╗ Vishal Adhithya (VA)
+# ██║   ██║███████║ https://github.com/terminal-guy/ (GITHUB  )
+# ╚██╗ ██╔╝██╔══██║
+#  ╚████╔╝ ██║  ██║
+#   ╚═══╝  ╚═╝  ╚═╝
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -21,17 +21,13 @@ export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH"
 
 
 
-#     _    _ _
-#    / \  | (_) __ _ ___
-#   / _ \ | | |/ _` / __|
-#  / ___ \| | | (_| \__ \
-# /_/   \_\_|_|\__,_|___/
-
-#alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-
-#shopt
+# █████████╗  ██╗██████╗██████╗████████╗
+# ██╔════██║  ████╔═══████╔══██╚══██╔══╝
+# ████████████████║   ████████╔╝  ██║   
+# ╚════████╔══████║   ████╔═══╝   ██║   
+# █████████║  ██╚██████╔██║       ██║   
+# ╚══════╚═╝  ╚═╝╚═════╝╚═╝       ╚═╝   
+                                    
 
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
@@ -40,6 +36,18 @@ shopt -s dotglob
 shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 shopt -s checkwinsize # checks term size when bash regains control
+
+
+#  █████╗ ██╗     ██╗ █████╗ ███████╗
+# ██╔══██╗██║     ██║██╔══██╗██╔════╝
+# ███████║██║     ██║███████║███████╗
+# ██╔══██║██║     ██║██╔══██║╚════██║
+# ██║  ██║███████╗██║██║  ██║███████║
+# ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝
+
+
+#alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 
@@ -77,15 +85,10 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 alias doom="~/.emacs.d/bin/doom"
 alias emacst="emacs --no-window-system"
-#colorscript random
-
-#alias clear='clear; echo; echo;  spark 0 30 55 80 33 150 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 150 0 40 55 80 33 120 0 40 55 80 33 15 | lolcat; echo; echo'
 
 alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo' # Coloured
 
-#
 # BTW I USE SNAPS>>>>>:/
-#
 alias lsblk='lsblk | grep -v snap'
 
 # Replacing Cat with Bat.
@@ -95,6 +98,9 @@ alias cat='bat'
 # I check neovim version everytime 
 
 alias nvim-v='nvim --version  | grep -v Compilation'
+
+# Source bash
+alias sourbb='source ~/.bashrc'
 
 
 # ██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗
