@@ -71,15 +71,10 @@ alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a --icons | egrep "^\."'
 
-
+# Changing Shells... >_
 
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
-
-# for display managers
-
-alias spectr="startx /usr/bin/spectrwm"
-
 
 # for doom emacs
 
@@ -92,10 +87,16 @@ alias emacst="emacs --no-window-system"
 alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo' # Coloured
 
 #
-# BTW I USE SNAPS>>>>>>:/
+# BTW I USE SNAPS>>>>>:/
 #
 alias lsblk='lsblk | grep -v snap'
+
+# Replacing Cat with Bat.
+
 alias cat='bat'
+
+# I check neovim version everytime 
+
 alias nvim-v='nvim --version  | grep -v Compilation'
 
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
