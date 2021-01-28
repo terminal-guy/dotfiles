@@ -158,6 +158,7 @@
 (exwm-input-set-key (kbd "s-K") #'+evil/window-move-right)
 (exwm-input-set-key (kbd "s-H") #'+evil/window-move-up)
 (exwm-input-set-key (kbd "s-L") #'+evil/window-move-down)
+(exwm-input-set-key (kbd "s-B") #'counsel-ibuffer)
 
 (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
 (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
