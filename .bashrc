@@ -21,14 +21,11 @@ export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH"
 
 
 
-#    _    _ _
-#   / \  | (_) __ _ ___
-#  / _ \ | | |/ _` / __|
-# / ___ \| | | (_| \__ \
-#/_/   \_\_|_|\__,_|___/
-#
-
-
+#     _    _ _
+#    / \  | (_) __ _ ___
+#   / _ \ | | |/ _` / __|
+#  / ___ \| | | (_| \__ \
+# /_/   \_\_|_|\__,_|___/
 
 #alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -99,14 +96,21 @@ alias cat='bat'
 
 alias nvim-v='nvim --version  | grep -v Compilation'
 
+
+# ██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗
+# ██╔══██╗██╔══██╗██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝
+# ██████╔╝██████╔╝██║   ██║██╔████╔██║██████╔╝   ██║   
+# ██╔═══╝ ██╔══██╗██║   ██║██║╚██╔╝██║██╔═══╝    ██║   
+# ██║     ██║  ██║╚██████╔╝██║ ╚═╝ ██║██║        ██║   
+# ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝   
+                                                     
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
-#exec fish
 #source ~/.prompt.sh
 #source ~/.config/bashrc/heavy_prompt.sh
+#eval "$(starship init bash)"
+
+
+# My current bash PROMPT:
 source ~/.config/bashrc/simple-but-cool.sh
 
-#exec fish
-#source "$HOME/.cargo/env"
-
-#eval "$(starship init bash)"
 
