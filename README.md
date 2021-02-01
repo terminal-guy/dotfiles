@@ -30,15 +30,15 @@ This is my Personal Configurations of the 🖥️ Window Manager and some of</br
 
 ## **MY SETUP**
 
-- **WM :** [Xmonad](https://hackage.haskell.org/package/xmonad), [Spectrwm](https://github.com/conformal/spectrwm), [Bspwm](https://github.com/baskerville/bspwm), [i3](https://i3wm.org/)
+- **WM :** [Qtile](),[Xmonad](https://hackage.haskell.org/package/xmonad), [Spectrwm](https://github.com/conformal/spectrwm), [Bspwm](https://github.com/baskerville/bspwm), [i3](https://i3wm.org/)
 
-- **DM :** [Lightdm with webkit2 Greeter](https://github.com/canonical/lightdm) with [Litarvan Theme](https://github.com/Litarvan/lightdm-webkit-theme-litarvan)
+- **DM :** [LXDM](https://github.com/canonical/lightdm) with [My own Custom Theme](https://github.com/Litarvan/lightdm-webkit-theme-litarvan)
 
-- **Shell:**                [Zsh](https://wiki.archlinux.org/index.php/zsh) With [oh my zsh](https://github.com/ohmyzsh/ohmyzsh) framework!
+- **Shell:**             [Bash]()
 
-- **Terminal:**[Alacritty](https://github.com/alacritty/alacritty), [URxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode), [Termite](https://wiki.archlinux.org/index.php/Termite), [Xterm](https://wiki.archlinux.org/index.php/Xterm)
+- **Terminal:** [Alacritty](https://github.com/alacritty/alacritty)
 - **Compositor:** [Picom](https://wiki.archlinux.org/index.php/Picom)
-- **Notify Daemon:** [Dunst](https://wiki.archlinux.org/index.php/Dunst)       minimalism :) !
+- **Notify Daemon:** [Dunst](https://wiki.archlinux.org/index.php/Dunst) 
 - **Application Launcher:** [Dmenu](https://tools.suckless.org/dmenu/), [Rofi](https://github.com/davatorium/rofi) with [Slate Theme](https://github.com/davatorium/rofi-themes/tree/master/User%20Themes)
 
 - **File Manager:** [PCManFM](https://wiki.archlinux.org/index.php/PCManFM)
