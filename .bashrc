@@ -102,8 +102,6 @@ alias nvim-v='nvim --version  | grep -v Compilation'
 # Source bash
 alias soub='source ~/.bashrc'
 
-# Replacing less with mess
-alias mess='| bat'
 
 # ██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗
 # ██╔══██╗██╔══██╗██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝
