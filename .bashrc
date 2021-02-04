@@ -12,9 +12,10 @@
 [[ $- != *i* ]] && return
 
 # Sets Neovim as MANPAGER 
-
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
+
+# Setting the paths 
 
 export SCRIPT_PATH="$HOME/bin/"
 export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH"
@@ -45,14 +46,14 @@ shopt -s checkwinsize # checks term size when bash regains control
 # ██║  ██║███████╗██║██║  ██║███████║
 # ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝
 
+# Managing DOTFILES
 
-#alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 
 # pacman and yay
-alias pman='sudo pacman'
+alias pan='sudo pacman'
 alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
 alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
 alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
@@ -66,10 +67,9 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
 
-# export PATH="$PATH:/home/va/.source/development/flutter/bin"
-
 
 # Changing "ls" to "exa"
+
 alias la='exa -al --color=always --group-directories-first --icons' # my preferred listing
 alias ls='exa -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
@@ -81,7 +81,7 @@ alias l.='exa -a --icons | egrep "^\."'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-# for doom emacs
+# For Emacs
 
 alias doom="~/.emacs.d/bin/doom"
 alias emacst="emacs --no-window-system"
