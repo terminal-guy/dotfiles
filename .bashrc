@@ -86,6 +86,8 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias doom="~/.emacs.d/bin/doom"
 alias emacst="emacs --no-window-system"
 
+# For outputing color like spark in clear command
+
 alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo' # Coloured
 
 # BTW I USE SNAPS>>>>>:/
