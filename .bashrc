@@ -78,8 +78,8 @@ alias l.='exa -a --icons | egrep "^\."'
 
 # Changing Shells... >_
 
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out. Now on bash'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out. Now on fish'"
 
 # For Emacs
 
