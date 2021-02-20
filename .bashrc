@@ -112,8 +112,9 @@ alias soub='source ~/.bashrc'
 # ██║     ██║  ██║╚██████╔╝██║ ╚═╝ ██║██║        ██║   
 # ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝   
                                                      
+# I Don't use this prompt RIGHT NOW :?
+
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
-#source ~/.prompt.sh
 #source ~/.config/bash/heavy_prompt.sh
 #eval "$(starship init bash)"
 
