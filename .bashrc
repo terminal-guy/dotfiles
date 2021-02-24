@@ -86,11 +86,12 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out. Now on fish'"
 alias doom="~/.emacs.d/bin/doom"
 alias emacst="emacs --no-window-system"
 
-# For outputing color like spark in clear command
+# Coloured spark 
 
 alias clear='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo' # Coloured
 
 # BTW I USE SNAPS>>>>>:/
+
 alias lsblk='lsblk | grep -v snap'
 
 # Replacing Cat with Bat.
@@ -117,7 +118,6 @@ alias soub='source ~/.bashrc'
 #export PS1="\[\e[33m\]\w \`parse_git_branch\` ❯\[\e[m\]\[\e[35m\]❯\[\e[m\]\[\e[32m\]❯\[\e[m\]  "
 #source ~/.config/bash/heavy_prompt.sh
 #eval "$(starship init bash)"
-
 
 # My current bash PROMPT:
 source ~/.config/bash/simple-but-cool.sh
