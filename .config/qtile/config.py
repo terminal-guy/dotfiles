@@ -368,13 +368,13 @@ def init_widgets_list():
             background=colors[5],
             fontsize=10
         ),
-        widget.Pacman(
-            update_interval=1800,
-            foreground=colors[2],
-            mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(
-                myTerm + ' -e sudo pacman -Syu')},
-            background=colors[5]
-        ),
+       # widget.Pacman(
+       #     update_interval=1800,
+       #     foreground=colors[2],
+       #     mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(
+       #         myTerm + ' -e sudo pacman -Syu')},
+       #     background=colors[5]
+       # ),
         widget.TextBox(
             text="Updates",
             padding=5,
