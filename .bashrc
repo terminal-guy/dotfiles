@@ -18,7 +18,8 @@ export MANWIDTH=999
 # Setting the paths 
 
 export SCRIPT_PATH="$HOME/bin/"
-export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH"
+export FLUTTER_PATH="$HOME/Dev/flutter/bin"
+export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH:$FLUTTER_PATH"
 
 
 
