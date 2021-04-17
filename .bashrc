@@ -106,6 +106,8 @@ alias nvim-v='nvim --version  | grep -v Compilation'
 # Source bash
 alias soub='source ~/.bashrc'
 
+# I miss YAY :/
+alias yay='paru'
 
 # ██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗
 # ██╔══██╗██╔══██╗██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝
