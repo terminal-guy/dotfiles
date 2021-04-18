@@ -1,5 +1,6 @@
 <p align="center">
-  <img width="650" height="300" src"https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/dots.png">
+  <img width="650" height="300" src="https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/dots.png">
+
 </p>
 
 #
