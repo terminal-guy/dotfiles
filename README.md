@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="650" height="300" src="https://hackernoon.com/hn-images/1*Li4H27cRUD8A4JWD8PtRUw.png">
+  <img width="650" height="300" src"https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/dots.png">
 </p>
 
 #
