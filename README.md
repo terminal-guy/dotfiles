@@ -27,7 +27,9 @@ This is my Personal Configurations of the 🖥️ Window Manager and some of</br
 ---
 
 <pre>
-## **MY SETUP**
+
+  <h1><i><b>MY SETUP</b></i></h1>
+
 </pre>
 
 <a href="https://www.deviantart.com/owl4ce/art/Joyful-Desktop-v2-1-858789495"><img height="500" src="https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/spider-collage.png" alt="preview" align="right" width="450px"></a>
@@ -50,11 +52,9 @@ This is my Personal Configurations of the 🖥️ Window Manager and some of</br
 
 - **Panel:** [Xmobar](https://hackage.haskell.org/package/xmobar), [Polybar](https://github.com/polybar/polybar), [Spectrwm BUILT IN BAR](https://github.com/conformal/spectrwm)
 
-<pre>
 
+----
 
-
-</pre>
 
 ### MY XMONAD ([config](https://github.com/terminal-guy/dotfiles/tree/master/.xmonad))
 
