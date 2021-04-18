@@ -26,10 +26,12 @@ This is my Personal Configurations of the 🖥️ Window Manager and some of</br
 
 ---
 
-<a href="https://www.deviantart.com/owl4ce/art/Joyful-Desktop-v2-1-858789495"><img height="500" src="https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/spider-collage.png" alt="preview" align="right" width="450px"></a>
-ndd
-
+<pre>
 ## **MY SETUP**
+</pre>
+
+<a href="https://www.deviantart.com/owl4ce/art/Joyful-Desktop-v2-1-858789495"><img height="500" src="https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/spider-collage.png" alt="preview" align="right" width="450px"></a>
+
 
 - **WM :** [Qtile](),[Xmonad](https://hackage.haskell.org/package/xmonad), [Spectrwm](https://github.com/conformal/spectrwm), [Bspwm](https://github.com/baskerville/bspwm), [i3](https://i3wm.org/)
 
