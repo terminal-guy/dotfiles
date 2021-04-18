@@ -27,9 +27,7 @@ This is my Personal Configurations of the 🖥️ Window Manager and some of</br
 ---
 
 <pre>
-
-  <h1><i><b>MY SETUP</b></i></h1>
-
+<center> <h1><i><b>MY SETUP</b></i></h1> </center>
 </pre>
 
 <a href="https://www.deviantart.com/owl4ce/art/Joyful-Desktop-v2-1-858789495"><img height="500" src="https://raw.githubusercontent.com/terminal-guy/dotfiles/master/.assets/spider-collage.png" alt="preview" align="right" width="450px"></a>
