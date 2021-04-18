@@ -66,7 +66,7 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 # youtube-dl
 
-alias yta="youtube-dl -x --embed-thumbnail --audio-format mp3"
+alias yta="youtube-dl -x --audio-format mp3"
 
 
 # Changing "ls" to "exa"
