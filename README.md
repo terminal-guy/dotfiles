@@ -48,11 +48,11 @@ ndd
 
 - **Panel:** [Xmobar](https://hackage.haskell.org/package/xmobar), [Polybar](https://github.com/polybar/polybar), [Spectrwm BUILT IN BAR](https://github.com/conformal/spectrwm)
 
-#
+<pre>
 
-#
 
-#
+
+</pre>
 
 ### MY XMONAD ([config](https://github.com/terminal-guy/dotfiles/tree/master/.xmonad))
 
