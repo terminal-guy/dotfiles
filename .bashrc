@@ -50,7 +50,7 @@ shopt -s checkwinsize # checks term size when bash regains control
 # Managing DOTFILES
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
+alias cpush='config push origin master'
 
 
 # pacman and yay
