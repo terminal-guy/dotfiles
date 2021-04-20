@@ -548,6 +548,7 @@ floating_layout = layout.Floating(
     {'wmclass': 'python3.9'},
     {'wmclass': 'jetbrains-studio'},
     {'wmclass': 'feh'},
+    {'wname': 'Android Emulator - the_next_vision:5554'},
     {'wmclass': 'dialog'},
     {'wmclass': 'download'},
     {'wmclass': 'error'},
