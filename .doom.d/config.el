@@ -113,6 +113,8 @@
 (use-package hover :ensure t) ;; run app from desktop without emulator
 
 
+(use-package emojify
+  :hook (after-init . global-emojify-mode))
 
 ;; ███████╗██╗  ██╗██╗    ██╗███╗   ███╗
 ;; ██╔════╝╚██╗██╔╝██║    ██║████╗ ████║
