@@ -51,4 +51,5 @@ fi
 picom &
 ~/.fehbg &
 # lxsession &
+nighter &
 exec qtile
