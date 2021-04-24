@@ -21,7 +21,7 @@
       ;; I have my mbsyncrc in a different folder on my system, to keep it separate from the
       ;; mbsyncrc available publicly in my dotfiles. You MUST edit the following line.
       ;; Be sure that the following command is: "mbsync -c ~/.config/mu4e/mbsyncrc -a"
-      mu4e-get-mail-command "mbsync -a"
+      mu4e-get-mail-command "mbsync -c ~/.config/mu4e/mbsyncrc -a"
       mu4e-update-interval  300
       mu4e-main-buffer-hide-personal-addresses t
       message-send-mail-function 'smtpmail-send-it
@@ -62,7 +62,7 @@
 (require 'unicode-fonts)
 (unicode-fonts-setup)
 
-(setq doom-theme 'doom-city-lights)
+(setq doom-theme 'doom-one)
 
 (setq fancy-splash-image "~/Pictures/doom-logo.png")
 
@@ -113,8 +113,6 @@
 (use-package hover :ensure t) ;; run app from desktop without emulator
 
 
-(use-package emojify
-  :hook (after-init . global-emojify-mode))
 
 ;; ███████╗██╗  ██╗██╗    ██╗███╗   ███╗
 ;; ██╔════╝╚██╗██╔╝██║    ██║████╗ ████║
