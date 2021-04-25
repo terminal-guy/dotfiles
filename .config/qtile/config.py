@@ -116,7 +116,7 @@ keys = [
         desc='scrot screenshot utils'
         ),
     Key([mod], "m",
-        lazy.layout.maximize(),
+        lazy.window.toggle_fullscreen(),
         desc='toggle window between minimum and maximum sizes'
         ),
     Key([mod, "shift"], "f",
@@ -124,8 +124,8 @@ keys = [
         desc='toggle floating'
         ),
     Key([mod, "shift"], "m",
-        lazy.window.toggle_fullscreen(),
-        desc='toggle fullscreen'
+        lazy.spawn("emacsclient -c -a 'emacs' --eval '(mu4e)'"),
+        desc='toggle mail'
         ),
     # Stack controls
     Key([mod, "shift"], "space",
