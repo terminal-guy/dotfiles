@@ -117,9 +117,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
 local names = { "main", "www", "skype", "gimp", "office", "im", "7", "8", "9" }
 local l = awful.layout.suit  -- Just to save some typing: use an alias.
-local layouts = { l.floating, l.tile, l.floating, l.fair, l.max,
+local layouts = {  l.tile, l.floating, l.floating, l.fair, l.max,
     l.floating, l.tile.left, l.floating, l.floating }
-awful.tag(names, s, layouts)
+awful.tag(names, s, layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
