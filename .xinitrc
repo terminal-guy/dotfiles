@@ -53,4 +53,5 @@ picom &
 # lxsession &
 /usr/bin/emacs --daemon &
 nighter &
-exec qtile
+#exec qtile
+exec awesome
