@@ -51,6 +51,6 @@ fi
 picom &
 ~/.fehbg &
 # lxsession &
-# /usr/bin/emacs --daemon &
+/usr/bin/emacs --daemon &
 nighter &
 exec qtile
