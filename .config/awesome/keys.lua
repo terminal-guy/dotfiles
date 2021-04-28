@@ -11,6 +11,7 @@ local naughty = require("naughty")
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")  
+local helpers = require("helpers")
 
 
 local keys = {}
@@ -56,6 +57,24 @@ awful.keyboard.append_global_keybindings({
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
+ -- Volume Control with volume keys
+    awful.key( { }, "XF86AudioMute",
+        function()
+            helpers.volume_control(0)
+        end,
+        {description = "(un)mute volume", group = "volume"}),
+    awful.key( { }, "XF86AudioLowerVolume",
+        function()
+            helpers.volume_control(-5)
+        end,
+        {description = "lower volume", group = "volume"}),
+    awful.key( { }, "XF86AudioRaiseVolume",
+        function()
+            helpers.volume_control(5)
+        end,
+        {description = "raise volume", group = "volume"}),
+
+
 })
 
 -- Tags related keybindings
