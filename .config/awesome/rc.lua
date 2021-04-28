@@ -123,7 +123,8 @@ end)
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-local names = { "main", "www", "skype", "gimp",  }
+local names = {' ', ' ', ' ', ' ', ' '}
+-- local names = { ' ', '', ' ', '', ''', }
 local l = awful.layout.suit  -- Just to save some typing: use an alias.
 local layouts = {  l.tile, l.floating, l.floating, l.fair, l.max,
     l.floating, l.tile.left, l.floating, l.floating }

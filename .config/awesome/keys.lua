@@ -12,6 +12,7 @@ local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")  
 local helpers = require("helpers")
+local switcher = require("awesome-switcher")
 
 
 local keys = {}
@@ -73,6 +74,10 @@ awful.keyboard.append_global_keybindings({
             helpers.volume_control(5)
         end,
         {description = "raise volume", group = "volume"}),
+    awful.key({ "Mod1",           }, "Tab",
+      function ()
+          switcher.switch( 1, "Mod1", "Alt_L", "Shift", "Tab")
+      end),
 
 
 })
