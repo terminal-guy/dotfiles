@@ -17,9 +17,10 @@ export MANWIDTH=999
 
 # Setting the paths 
 
+export cargo_path="$HOME/.cargo/bin/"
 export SCRIPT_PATH="$HOME/bin/"
 export FLUTTER_PATH="$HOME/Dev/flutter/bin"
-export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH:$FLUTTER_PATH"
+export PATH="$HOME/.local/bin:$PATH:$SCRIPT_PATH:$FLUTTER_PATH:$cargo_path"
 
 
 
