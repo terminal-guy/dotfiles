@@ -53,6 +53,12 @@ shopt -s checkwinsize # checks term size when bash regains control
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cpush='config push origin master'
 
+# Git aliases
+alias g='git'
+alias gadd='git add'
+alias gcom='git commit -m'
+alias gpush='git push'
+alias gstat='git status'
 
 # pacman and yay
 alias pan='sudo pacman'
@@ -103,6 +109,7 @@ alias cat='bat'
 # I check neovim version everytime 
 
 alias nvim-v='nvim --version  | grep -v Compilation'
+alias nvim='~/bin/nvim.appimage'
 
 # Source bash
 alias soub='source ~/.bashrc'
@@ -125,3 +132,4 @@ alias yay='paru'
 
 # My current bash PROMPT:
 source ~/.config/bash/simple-but-cool.sh
+pfetch
