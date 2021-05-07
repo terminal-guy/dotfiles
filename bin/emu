@@ -1,0 +1,5 @@
+#/bin/sh
+
+
+wmctrl -i -r $(wmctrl -l | grep ' Android Emulator - ' | sed -e 's/\s.*$//g') -b toggle,above
+wmctrl -i -r $(wmctrl -l | grep ' Emulator$' | sed -e 's/\s.*$//g') -b toggle,above
